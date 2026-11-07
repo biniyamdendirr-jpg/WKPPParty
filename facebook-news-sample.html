@@ -1,0 +1,25 @@
+<!-- ============================================================
+     FACEBOOK NEWS SECTION — Youth Wing (native news cards)
+     ------------------------------------------------------------
+     Drop this into index.html where you want the Youth Wing news.
+     The grid is populated by js/facebook-news.js (mobile:1 col,
+     tablet:2, desktop:3). Requires a running serverless endpoint.
+     ============================================================ -->
+<section id="fb-news" class="py-20 sm:py-28 bg-cream">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center">
+      <h2 class="text-brand"><i class="fa-solid fa-bullhorn text-gold mr-3"></i>የወልቂጤ ከተማ ወጣቶች ክንፍ ዜና</h2>
+      <p class="mt-3 text-gray-500 max-w-2xl mx-auto prose-body">Wolkite City Youth Wing — latest updates</p>
+    </div>
+
+    <!-- News grid: mobile 1-col, tablet 2-col, desktop 3-col -->
+    <div id="fbNewsGrid" class="mt-12 grid gap-7 sm:grid-cols-2 lg:grid-cols-3"></div>
+  </div>
+</section>
+
+<!-- Wiring: load the frontend module and initialize after the grid exists -->
+<script src="js/facebook-news.js"></script>
+<script>
+  FACEBOOK_CONFIG.ENDPOINT = 'https://<your-worker>.workers.dev/api/news'; // step 4: set real URL
+  FACEBOOK_NEWS.init(document.getElementById('fbNewsGrid'));
+</script>

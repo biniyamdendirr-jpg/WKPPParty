@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>የወልቂጤ ከተማ ብልጽግና ፓርቲ | Wolkite City Prosperity Party</title>
+<meta name="description" content="የወልቂጤ ከተማ ብልጽግና ፓርቲ ይፋዊ ድህረ-ገፅ — ስለ እኛ፣ አመራር፣ እንቅስቃሴዎች፣ ዜናና የመረጃ መዳረሻ። Official website of the Wolkite City Prosperity Party.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: { brand:'#08B8D9', brandDark:'#087F9B', brandLight:'#5BC9DE', gold:'#D9A441', goldLight:'#A9E2EF', crimson:'#B22222', cream:'#F7FAFC', ink:'#17324D' },
+    fontFamily: { sans:['Inter','Noto Sans Ethiopic','sans-serif'], display:['Plus Jakarta Sans','Noto Sans Ethiopic','sans-serif'], eth:['Noto Sans Ethiopic','sans-serif'] },
+    boxShadow: { card:'0 12px 32px -14px rgba(8,95,118,.16)', gold:'0 16px 40px -12px rgba(217,164,65,.42)', green:'0 18px 45px -12px rgba(8,127,155,.5)' }
+  } }
+}
+</script>
+<style>
+/* ================================================================
+   DESIGN TOKENS — Wolkite City Prosperity Party (white / cyan / teal / navy)
+   ================================================================ */
+:root{
+  --bg:#FFFFFF; --bg-card:#FFFFFF; --bg-soft:#F7FAFC;
+  --text:#17324D; --muted:#4E6478; --border:rgba(8,95,118,.14);
+  --brand:#08B8D9; --brand-dark:#087F9B; --surface-dark:#0A4256;
+  --gold:#D9A441; --accent-light:#A9E2EF; --crimson:#B22222;
+  --shadow-card:0 12px 32px -14px rgba(8,95,118,.18);
+}
+html[data-theme="dark"]{
+  --bg:#0F172A; --bg-card:#1B2536; --bg-soft:#152032;
+  --text:#E7ECF3; --muted:#98A2B3; --border:rgba(255,255,255,.10);
+}
+html{ scroll-behavior:smooth; scroll-padding-top:6.5rem; }
+body{ font-family:'Inter','Noto Sans Ethiopic',sans-serif; background:var(--bg); color:var(--text); transition:background .3s ease,color .3s ease; }
+body.lang-am h1,body.lang-am h2,body.lang-am h3,body.lang-am h4{ font-family:'Noto Sans Ethiopic',sans-serif; letter-spacing:0; }
+.prose-body{ line-height:1.85; }
+.container-x{ width:100%; max-width:80rem; margin-inline:auto; padding-inline:1.25rem; }
+::selection{ background:#08B8D9; color:#17324D; }
+::-webkit-scrollbar{ width:10px; } ::-webkit-scrollbar-track{ background:var(--bg); }
+::-webkit-scrollbar-thumb{ background:#087F9B; border-radius:8px; }
+/* ---------- Reusable components ---------- */
+.section{ padding-block:5rem; } @media(min-width:768px){ .section{ padding-block:6.5rem; } }
+.eyebrow{ display:inline-flex; align-items:center; gap:.5rem; font-size:.75rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:var(--brand-dark); }
+.eyebrow::before{ content:''; width:1.75rem; height:2px; background:var(--gold); border-radius:2px; }
+.h2{ font-family:'Plus Jakarta Sans','Noto Sans Ethiopic',sans-serif; font-weight:800; font-size:clamp(1.65rem,3.4vw,2.4rem); line-height:1.18; color:var(--brand-dark); letter-spacing:-.01em; }
+html[data-theme="dark"] .h2{ color:#F3F7F4; }
+.sub{ margin-top:.85rem; color:var(--muted); max-width:44rem; }
+.card{ background:var(--bg-card); border:1px solid var(--border); border-radius:1.25rem; box-shadow:var(--shadow-card); }
+.chip{ display:inline-flex; align-items:center; gap:.4rem; font-size:.72rem; font-weight:700; letter-spacing:.04em; padding:.35rem .8rem; border-radius:9999px; background:rgba(8,184,217,.10); color:#087F9B; border:1px solid rgba(8,184,217,.32); }
+html[data-theme="dark"] .chip{ color:#7FD9EA; }
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:.6rem; font-weight:700; font-size:.92rem; border-radius:9999px; padding:.8rem 1.6rem; transition:all .25s ease; cursor:pointer; }
+.btn-gold{ background:var(--brand); color:#17324D; box-shadow:0 12px 28px -10px rgba(8,184,217,.5); }
+.btn-gold:hover{ background:#08A9C6; transform:translateY(-2px); }
+.btn-green{ background:var(--brand-dark); color:#fff; box-shadow:0 12px 28px -10px rgba(8,127,155,.5); }
+.btn-green:hover{ background:#066882; transform:translateY(-2px); }
+.btn-ghost{ border:1.5px solid rgba(255,255,255,.55); color:#fff; backdrop-filter:blur(6px); }
+.btn-ghost:hover{ background:rgba(255,255,255,.14); transform:translateY(-2px); }
+.btn-outline{ border:1.5px solid var(--brand-dark); color:var(--brand-dark); }
+.btn-outline:hover{ background:var(--brand-dark); color:#fff; }
+html[data-theme="dark"] .btn-outline{ border-color:#7FD9EA; color:#7FD9EA; }
+html[data-theme="dark"] .btn-outline:hover{ background:#7FD9EA; color:#0F172A; }
+/* ---------- Reveal-on-scroll ---------- */
+.reveal{ opacity:0; transform:translateY(26px); transition:opacity .7s ease,transform .7s ease; }
+.reveal.in{ opacity:1; transform:none; }
+.reveal-1{ transition-delay:.09s; } .reveal-2{ transition-delay:.18s; } .reveal-3{ transition-delay:.27s; }
+@media (prefers-reduced-motion: reduce){ .reveal{ opacity:1 !important; transform:none !important; transition:none !important; } html{ scroll-behavior:auto; } }
+/* Accessible keyboard focus */
+:focus-visible{ outline:3px solid rgba(8,184,217,.85); outline-offset:2px; }
+
+/* ---------- Header / navigation ---------- */
+#topbar{ background:var(--surface-dark); color:#fff; font-size:.78rem; }
+.lang-pill{ opacity:.55; transition:all .2s; } .lang-pill.on{ opacity:1; color:var(--gold); }
+#mainNav{ position:fixed; top:2.1rem; inset-inline:0; z-index:50; background:rgba(255,255,255,.92); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid transparent; transition:background .3s ease,border-color .3s ease,box-shadow .3s ease,top .3s ease; }
+#mainNav.scrolled{ background:rgba(10,66,86,.97); box-shadow:0 10px 30px rgba(4,24,36,.35); border-color:rgba(8,184,217,.28); }
+#mainNav.scrolled .nav-link{ color:rgba(255,255,255,.88); } #mainNav.scrolled .nav-brand{ color:#fff; }
+#mainNav.scrolled .nav-link:hover{ color:var(--accent-light); }
+#mainNav.scrolled .nav-link.active{ color:var(--accent-light); }
+.nav-link{ color:#33424E; font-weight:600; font-size:.9rem; padding:.5rem .72rem; border-radius:.7rem; transition:color .2s; position:relative; }
+.nav-link:hover{ color:var(--brand); }
+.nav-link.active{ color:var(--brand-dark); font-weight:700; }
+.nav-link.active::after{ content:''; position:absolute; left:.72rem; right:.72rem; bottom:.12rem; height:2px; border-radius:2px; background:var(--brand); }
+html[data-theme="dark"] #mainNav:not(.scrolled){ background:rgba(15,23,42,.88); }
+html[data-theme="dark"] #mainNav:not(.scrolled) .nav-link{ color:#D6DEE8; }
+html[data-theme="dark"] #mainNav:not(.scrolled) .nav-brand{ color:#fff; }
+html[data-theme="dark"] #mainNav:not(.scrolled) .nav-link:hover{ color:#fff; }
+.logo-badge{ position:relative; width:2.75rem; height:2.75rem; border-radius:9999px; flex-shrink:0; overflow:hidden; display:flex; align-items:center; justify-content:center; background:#fff; box-shadow:0 0 0 2px var(--brand),var(--shadow-card); }
+.logo-badge img{ width:100%; height:100%; object-fit:cover; }
+#mobileMenu{ transform:translateX(105%); transition:transform .4s cubic-bezier(.4,0,.2,1); }
+#mobileMenu.open{ transform:translateX(0); }
+#mobileBackdrop{ opacity:0; pointer-events:none; transition:opacity .35s ease; }
+#mobileBackdrop.open{ opacity:1; pointer-events:auto; }
+
+/* ---------- Hero ---------- */
+#hero{ position:relative; min-height:88vh; display:flex; align-items:center; overflow:hidden; background:var(--surface-dark); }
+.car-slide{ position:absolute; inset:0; opacity:0; transition:opacity 1.1s ease; }
+.car-slide.active{ opacity:1; }
+.car-slide img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 28%; }
+@keyframes kenburns{ from{ transform:scale(1);} to{ transform:scale(1.1);} }
+.car-slide.active img{ animation:kenburns 10s ease-in-out infinite alternate; }
+.slide-tint{ position:absolute; inset:0; background:linear-gradient(118deg,rgba(7,32,48,.72) 0%,rgba(8,74,94,.46) 52%,rgba(8,95,118,.22) 100%); }
+@media (prefers-reduced-motion: reduce){ .car-slide.active img{ animation:none; } }
+.hero-overlay{ position:absolute; inset:0; background:linear-gradient(100deg,rgba(7,32,48,.9) 0%,rgba(8,74,94,.72) 45%,rgba(8,95,118,.3) 100%); }
+.hero-overlay::after{ content:''; position:absolute; inset:auto 0 0 0; height:36%; background:linear-gradient(to top,rgba(7,32,48,.85),transparent); }
+.hero-content{ position:relative; z-index:5; padding-block:7.5rem 5.5rem; max-width:44rem; }
+.hero-badge{ display:inline-flex; align-items:center; gap:.55rem; padding:.45rem 1rem .45rem .55rem; border-radius:9999px; background:rgba(8,184,217,.16); border:1px solid rgba(8,184,217,.45); color:#A9E2EF; font-size:.75rem; font-weight:700; letter-spacing:.06em; backdrop-filter:blur(6px); }
+.hero-title{ font-family:'Plus Jakarta Sans','Noto Sans Ethiopic',sans-serif; font-weight:800; font-size:clamp(2rem,5vw,3.3rem); line-height:1.12; color:#fff; letter-spacing:-.015em; text-shadow:0 4px 30px rgba(0,0,0,.45); }
+.hero-sub{ margin-top:1.1rem; color:rgba(255,255,255,.82); max-width:36rem; }
+.hero-dot{ width:.65rem; height:.65rem; border-radius:9999px; background:rgba(255,255,255,.45); transition:all .35s ease; }
+.hero-dot.active{ width:1.9rem; background:var(--brand); }
+@keyframes floaty{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(8px);} }
+.scroll-cue{ animation:floaty 2.4s ease-in-out infinite; }
+/* ---------- About + vision/mission/values/objectives ---------- */
+.about-media{ border-radius:1.75rem; overflow:hidden; box-shadow:0 24px 60px -18px rgba(8,74,94,.4); min-height:26rem; }
+.about-media img{ width:100%; height:100%; object-fit:cover; display:block; }
+.vm-card{ border-radius:1.1rem; padding:1.15rem 1.25rem; border:1px dashed rgba(8,127,155,.5); background:rgba(8,184,217,.06); }
+.vm-card h4{ font-weight:800; color:var(--brand-dark); display:flex; align-items:center; gap:.55rem; font-size:.98rem; }
+html[data-theme="dark"] .vm-card h4{ color:#7FD9EA; }
+.vm-card p{ margin-top:.4rem; font-size:.88rem; color:var(--muted); line-height:1.75; }
+.mission-quote{ position:relative; overflow:hidden; border-radius:1.5rem; padding:2.3rem 2rem 2.1rem; background:linear-gradient(135deg,var(--brand-dark),#0A4256); color:#fff; box-shadow:0 18px 45px -12px rgba(8,127,155,.5); }
+.mission-quote::before{ content:'\201C'; position:absolute; top:-1.6rem; inset-inline-start:1.1rem; font-family:'Plus Jakarta Sans',sans-serif; font-size:7rem; line-height:1; color:rgba(255,255,255,.14); }
+.mission-quote::after{ content:''; position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:4.5rem; height:3px; border-radius:3px 3px 0 0; background:var(--gold); }
+.mission-quote h3{ position:relative; }
+.mission-quote p{ position:relative; font-size:1.45rem; font-weight:800; line-height:1.7; }
+.vmo-card{ position:relative; border-radius:1.25rem; padding:1.7rem 1.5rem; background:var(--bg-card); border:1px solid var(--border); box-shadow:var(--shadow-card); display:flex; flex-direction:column; height:100%; transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease; }
+.vmo-card::before{ content:''; position:absolute; top:-1px; inset-inline-start:1.5rem; width:3.2rem; height:3px; border-radius:0 0 4px 4px; background:var(--brand); }
+.vmo-card:hover{ transform:translateY(-4px); border-color:rgba(8,184,217,.45); box-shadow:0 18px 40px -14px rgba(8,95,118,.28); }
+.vmo-card .year{ align-self:flex-start; display:inline-flex; align-items:center; gap:.5rem; font-weight:800; color:var(--brand-dark); font-size:.78rem; letter-spacing:.05em; background:rgba(8,184,217,.10); border:1px solid rgba(8,184,217,.32); padding:.32rem .8rem; border-radius:9999px; }
+.vmo-card h3{ font-weight:800; color:var(--brand-dark); font-size:1.12rem; margin-top:.8rem; line-height:1.4; }
+.vmo-card p{ margin-top:.55rem; color:var(--muted); font-size:.9rem; line-height:1.75; }
+.value-card{ border-radius:1.25rem; padding:1.5rem; background:var(--bg-card); border:1px solid var(--border); box-shadow:var(--shadow-card); transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease; }
+.value-card:hover{ transform:translateY(-3px); border-color:rgba(8,184,217,.4); box-shadow:0 16px 36px -14px rgba(8,95,118,.26); }
+.value-card i{ display:inline-flex; align-items:center; justify-content:center; width:2.6rem; height:2.6rem; border-radius:.85rem; background:rgba(8,184,217,.10); border:1px solid rgba(8,184,217,.32); color:#087F9B; font-size:1.05rem; }
+.value-card h3{ font-weight:800; color:var(--brand-dark); font-size:1.05rem; margin-top:.7rem; }
+.value-card p{ color:var(--muted); font-size:.87rem; line-height:1.7; margin-top:.5rem; }
+.obj-card{ position:relative; border-radius:1.1rem; padding:1.25rem 1.5rem 1.25rem 1.4rem; background:var(--bg-card); border:1px solid var(--border); box-shadow:var(--shadow-card); display:flex; gap:1rem; align-items:flex-start; transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease; }
+.obj-card::before{ content:''; position:absolute; inset-inline-start:0; top:1.35rem; bottom:1.35rem; width:3px; border-radius:0 4px 4px 0; background:rgba(8,184,217,.4); }
+.obj-card:hover{ transform:translateY(-3px); border-color:rgba(8,184,217,.45); box-shadow:0 16px 36px -14px rgba(8,95,118,.28); }
+.obj-card .num{ width:2.75rem; height:2.75rem; border-radius:.9rem; background:var(--brand); color:#17324D; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:1.05rem; flex-shrink:0; box-shadow:0 8px 18px -8px rgba(8,184,217,.55); }
+.obj-card p{ color:var(--text); font-size:.93rem; line-height:1.8; }
+/* ---------- Areas of Focus (themes reflected across the site — no achievements claimed) ---------- */
+.focus-card{ display:flex; align-items:center; gap:.9rem; border-radius:1.1rem; padding:1.1rem 1.2rem; background:var(--bg-card); border:1px solid var(--border); box-shadow:var(--shadow-card); transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease; height:100%; }
+.focus-card:hover{ transform:translateY(-3px); border-color:rgba(8,184,217,.45); box-shadow:0 16px 36px -14px rgba(8,95,118,.28); }
+.focus-card i{ display:inline-flex; align-items:center; justify-content:center; width:2.7rem; height:2.7rem; border-radius:.85rem; background:rgba(8,184,217,.10); border:1px solid rgba(8,184,217,.32); color:#087F9B; font-size:1.05rem; flex-shrink:0; }
+.focus-card h4{ font-weight:800; color:var(--text); font-size:.92rem; line-height:1.5; }
+html[data-theme="dark"] .focus-card h4{ color:#F3F7F4; }
+
+/* ---------- Subsection divider ---------- */
+.subsec-head{ display:flex; align-items:center; gap:1rem; margin-top:3.5rem; }
+.subsec-head::after{ content:''; flex:1; height:1px; background:rgba(8,184,217,.35); }
+.subsec-head h3{ font-family:'Noto Sans Ethiopic','Plus Jakarta Sans',sans-serif; font-weight:800; font-size:1.2rem; color:var(--brand-dark); }
+html[data-theme="dark"] .subsec-head h3{ color:#7FD9EA; }
+
+/* ---------- Impact statistics (placeholders only — no invented numbers) ---------- */
+.stat-card{ text-align:center; padding:1.6rem 1rem; border-radius:1.25rem; background:var(--bg-soft); border:1px solid var(--border); box-shadow:var(--shadow-card); transition:transform .3s ease,box-shadow .3s ease; height:100%; }
+.stat-card:hover{ transform:translateY(-3px); box-shadow:0 18px 40px -14px rgba(8,95,118,.28); }
+.stat-num{ font-size:2.1rem; font-weight:800; font-family:'Plus Jakarta Sans',sans-serif; color:var(--brand-dark); line-height:1.1; }
+.stat-card h4{ margin-top:.45rem; font-size:.82rem; font-weight:700; color:var(--text); line-height:1.5; }
+/* ---------- Leadership (.update — all 7 leaders, exact names/roles/photos) ---------- */
+.leader-card{ position:relative; border-radius:1.4rem; overflow:hidden; background:var(--bg-card); border:1px solid var(--border); box-shadow:var(--shadow-card); cursor:pointer; transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease; height:100%; }
+.leader-card:hover{ transform:translateY(-5px); box-shadow:0 22px 48px -16px rgba(8,95,118,.32); border-color:rgba(8,184,217,.45); }
+.leader-photo{ position:relative; aspect-ratio:4/3.7; overflow:hidden; background:linear-gradient(135deg,var(--brand-dark),#0A4256); }
+.leader-photo img{ width:100%; height:100%; object-fit:cover; object-position:center 22%; transition:transform .55s ease; }
+.leader-card:hover .leader-photo img{ transform:scale(1.05); }
+.leader-photo::after{ content:''; position:absolute; inset:0; background:linear-gradient(to bottom,transparent 60%,rgba(7,32,48,.6)); }
+.leader-meta{ position:static; padding:1rem 1.1rem; background:var(--bg-card); }
+.leader-role{ display:block; color:#087F9B; font-size:.72rem; font-weight:700; letter-spacing:.015em; line-height:1.5; }
+html[data-theme="dark"] .leader-role{ color:var(--accent-light); }
+.leader-name{ color:var(--text); font-weight:800; font-size:1rem; margin-top:.35rem; line-height:1.4; }
+html[data-theme="dark"] .leader-name{ color:#F3F7F4; }
+.leader-view{ position:absolute; top:.8rem; inset-inline-end:.8rem; z-index:2; opacity:0; transform:translateY(-6px); transition:all .3s ease; background:var(--brand); color:#17324D; font-size:.7rem; font-weight:800; padding:.4rem .75rem; border-radius:9999px; }
+.leader-card:hover .leader-view, .leader-card:focus-visible .leader-view{ opacity:1; transform:none; }
+.leader-card:focus-visible{ outline:3px solid var(--brand); outline-offset:2px; }
+#leaderModal{ position:fixed; inset:0; z-index:90; display:flex; align-items:center; justify-content:center; padding:1.25rem; background:rgba(6,20,32,.78); backdrop-filter:blur(8px); opacity:0; visibility:hidden; transition:opacity .3s ease,visibility .3s ease; }
+#leaderModal.open{ opacity:1; visibility:visible; }
+.leader-sheet{ background:var(--bg-card); border:1px solid rgba(8,184,217,.3); border-radius:1.75rem; max-width:52rem; width:100%; max-height:88vh; overflow:auto; box-shadow:0 40px 90px rgba(0,0,0,.5); transform:translateY(18px); transition:transform .35s ease; }
+#leaderModal.open .leader-sheet{ transform:none; }
+
+/* ---------- Latest news (.update — facebook-news.js, API-ready) ---------- */
+.news-card{ background:var(--bg-card); border:1px solid var(--border); border-radius:1.25rem; overflow:hidden; box-shadow:var(--shadow-card); transition:transform .3s ease,box-shadow .3s ease; display:flex; flex-direction:column; }
+.news-card:hover{ transform:translateY(-5px); box-shadow:0 22px 48px -16px rgba(8,95,118,.3); }
+.news-card figure{ position:relative; overflow:hidden; }
+.news-card figure img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s ease; }
+.news-card:hover figure img{ transform:scale(1.06); }
+.news-card figure::after{ content:''; position:absolute; inset:0; background:linear-gradient(to top,rgba(7,32,48,.3),transparent 45%); }
+.news-date{ display:inline-flex; align-items:center; gap:.45rem; font-size:.72rem; font-weight:700; color:#087F9B; background:rgba(8,184,217,.10); border:1px solid rgba(8,184,217,.32); padding:.3rem .7rem; border-radius:9999px; }
+html[data-theme="dark"] .news-date{ color:#7FD9EA; }
+/* ---------- Native news cards + full article view (.update PART 2) ---------- */
+.news-thumb{ aspect-ratio:16/10; overflow:hidden; position:relative; }
+.news-thumb-fallback{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:2rem; color:#A9E2EF; background:linear-gradient(135deg,var(--brand-dark),#0A4256); }
+.news-wrap{ display:flex; flex-direction:column; flex:1; padding:1.2rem 1.3rem 1.3rem; }
+.news-title{ font-weight:800; color:var(--text); font-size:1.02rem; line-height:1.55; margin-top:.6rem; }
+html[data-theme="dark"] .news-title{ color:#F3F7F4; }
+.news-excerpt{ color:var(--muted); font-size:.86rem; line-height:1.7; margin-top:.45rem; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+.news-foot{ margin-top:auto; padding-top:.9rem; display:flex; flex-direction:column; gap:.55rem; align-items:flex-start; }
+.news-more{ display:inline-flex; align-items:center; gap:.45rem; font-weight:800; font-size:.78rem; color:#087F9B; background:transparent; border:1.5px solid rgba(8,127,155,.45); border-radius:9999px; padding:.42rem .95rem; cursor:pointer; transition:all .25s ease; }
+.news-more:hover{ background:var(--brand); border-color:var(--brand); color:#17324D; }
+.news-more:focus-visible{ outline:3px solid var(--brand); outline-offset:2px; }
+.news-src-sub{ display:inline-flex; align-items:center; gap:.4rem; font-size:.68rem; font-weight:600; color:var(--muted); }
+.news-src-sub i{ color:#087F9B; }
+.news-featured .news-thumb{ aspect-ratio:21/9; }
+.news-featured .news-title{ font-size:1.18rem; }
+@media (min-width:640px){ .news-featured{ grid-column:span 2; } }
+.news-article-img{ width:100%; max-height:22rem; object-fit:cover; display:block; }
+.news-article-img-fallback{ height:14rem; display:flex; align-items:center; justify-content:center; font-size:2rem; color:#A9E2EF; background:linear-gradient(135deg,var(--brand-dark),#0A4256); }
+.news-sheet{ background:var(--bg-card); border:1px solid rgba(8,184,217,.3); border-radius:1.75rem; max-width:52rem; width:100%; max-height:88vh; overflow:auto; box-shadow:0 40px 90px rgba(0,0,0,.5); transform:translateY(18px); transition:transform .35s ease; }
+#newsModal.open .news-sheet{ transform:none; }
+.news-article-title{ font-weight:800; color:var(--text); font-size:1.3rem; line-height:1.5; margin-top:.9rem; }
+html[data-theme="dark"] .news-article-title{ color:#F3F7F4; }
+.news-article-body{ margin-top:.8rem; color:var(--text); font-size:.92rem; line-height:1.9; }
+.news-article-body p + p{ margin-top:.7rem; }
+.news-article-source{ margin-top:1.1rem; padding-top:.9rem; border-top:1px solid var(--border); display:flex; flex-wrap:wrap; align-items:center; gap:.8rem; justify-content:space-between; }
+.news-article-source > span{ font-size:.72rem; font-weight:600; color:var(--muted); }
+.news-src-link{ display:inline-flex; align-items:center; gap:.45rem; font-weight:700; font-size:.78rem; color:#087F9B; background:transparent; border:1.5px solid rgba(8,127,155,.45); border-radius:9999px; padding:.42rem .95rem; transition:all .25s ease; }
+.news-src-link:hover{ background:var(--brand); border-color:var(--brand); color:#17324D; }
+/* ---------- Media (.update — official social channels; unified palette, no platform color blocks) ---------- */
+.media-card{ display:flex; flex-direction:column; gap:.55rem; border-radius:1.25rem; padding:1.5rem; background:var(--bg-card); border:1px solid var(--border); box-shadow:var(--shadow-card); transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease; height:100%; }
+.media-card:hover{ transform:translateY(-4px); border-color:rgba(8,184,217,.45); box-shadow:0 18px 40px -14px rgba(8,95,118,.28); }
+.media-ic{ display:inline-flex; align-items:center; justify-content:center; width:3rem; height:3rem; border-radius:.9rem; background:rgba(8,184,217,.10); border:1px solid rgba(8,184,217,.32); color:#087F9B; font-size:1.25rem; }
+.media-card h3{ font-weight:800; color:var(--brand-dark); font-size:1.02rem; }
+.media-card p{ color:var(--muted); font-size:.84rem; line-height:1.7; flex:1; }
+.media-btn{ display:inline-flex; align-items:center; gap:.5rem; font-weight:800; font-size:.8rem; border-radius:9999px; padding:.5rem 1.1rem; background:var(--brand); color:#17324D; box-shadow:0 10px 22px -10px rgba(8,184,217,.5); transition:all .25s ease; align-self:flex-start; }
+a.media-btn:hover{ background:#08A9C6; transform:translateY(-1px); }
+.media-btn[aria-disabled="true"]{ background:var(--bg-soft); color:var(--muted); border:1.5px dashed var(--border); box-shadow:none; cursor:not-allowed; }
+/* ---------- Activities + Gallery (real photos bbb*, mu1, news*) ---------- */
+.act-card{ border-radius:1.5rem; overflow:hidden; box-shadow:var(--shadow-card); border:1px solid var(--border); }
+.act-card img{ width:100%; height:15rem; object-fit:cover; display:block; transition:transform .65s ease; }
+.act-card:hover img{ transform:scale(1.07); }
+.act-card-body{ padding:1.1rem 1.25rem; background:var(--bg-card); }
+.act-card-body h3{ font-weight:800; color:var(--brand-dark); font-size:1.02rem; }
+.act-card-body p{ color:var(--muted); font-size:.85rem; line-height:1.7; margin-top:.35rem; }
+.act-fallback{ height:15rem; display:flex; flex-direction:column; align-items:center; justify-content:center; color:#A9E2EF; background:linear-gradient(135deg,var(--brand-dark),#0A4256); }
+.act-fallback i{ font-size:2rem; } .act-fallback span{ margin-top:.6rem; font-size:.8rem; color:rgba(255,255,255,.75); text-align:center; }
+.gal-wrap{ columns:2; column-gap:1rem; }
+@media(min-width:640px){ .gal-wrap{ columns:3; } }
+@media(min-width:1024px){ .gal-wrap{ columns:4; } }
+.gal-item{ break-inside:avoid; margin-bottom:1rem; position:relative; border-radius:1.1rem; overflow:hidden; cursor:zoom-in; box-shadow:var(--shadow-card); border:1px solid var(--border); }
+.gal-item img{ width:100%; display:block; transition:transform .6s ease; }
+.gal-item:hover img{ transform:scale(1.06); }
+.gal-cap{ position:absolute; inset-inline:0; bottom:0; padding:.9rem; background:linear-gradient(to top,rgba(7,32,48,.85),transparent); color:#fff; font-size:.78rem; font-weight:600; opacity:0; transform:translateY(8px); transition:all .3s ease; }
+/* Polished empty state (Youth category — intentionally empty) */
+.gal-empty{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.7rem; padding:3.5rem 1rem; border:1.5px dashed rgba(8,184,217,.35); border-radius:1.25rem; background:rgba(8,184,217,.04); color:var(--muted); text-align:center; }
+.gal-empty i{ font-size:1.5rem; color:#087F9B; background:rgba(8,184,217,.10); border:1px solid rgba(8,184,217,.32); width:3.4rem; height:3.4rem; border-radius:9999px; display:flex; align-items:center; justify-content:center; }
+.gal-empty p{ font-size:.9rem; font-weight:600; }
+.gal-item:hover .gal-cap{ opacity:1; transform:none; }
+.gal-item.hide{ display:none; }
+#lightbox{ position:fixed; inset:0; z-index:95; background:rgba(5,16,26,.94); display:flex; align-items:center; justify-content:center; opacity:0; visibility:hidden; transition:opacity .3s ease,visibility .3s ease; }
+#lightbox.open{ opacity:1; visibility:visible; }
+#lightbox img{ max-height:80vh; max-width:92vw; border-radius:1rem; box-shadow:0 30px 80px rgba(0,0,0,.6); }
+.lb-btn{ width:2.9rem; height:2.9rem; border-radius:9999px; background:rgba(255,255,255,.1); color:#fff; display:flex; align-items:center; justify-content:center; transition:all .25s ease; }
+.lb-btn:hover{ background:var(--brand); color:#17324D; }
+
+/* ---------- Digital Library (verified external resources only) ---------- */
+.lib-toolbar{ display:flex; flex-wrap:wrap; align-items:center; gap:.85rem; }
+.lib-search{ min-width:14rem; }
+.lib-card{ border-radius:1.25rem; overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow-card); display:flex; flex-direction:column; background:var(--bg-card); transition:transform .3s ease,box-shadow .3s ease; height:100%; }
+.lib-card:hover{ transform:translateY(-4px); box-shadow:0 22px 48px -16px rgba(8,95,118,.32); }
+.lib-cover{ height:6.2rem; overflow:hidden; background:linear-gradient(135deg,var(--brand) 0%,#087F9B 52%,#0A4256 100%); position:relative; }
+.lib-cover::after{ content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 16% 22%, rgba(217,164,65,.18), transparent 62%); }
+.lib-mono{ position:absolute; inset-inline-start:1rem; top:1rem; font-family:'Plus Jakarta Sans','Noto Sans Ethiopic',sans-serif; font-weight:800; color:var(--accent-light); font-size:.92rem; letter-spacing:.02em; line-height:1.35; max-width:60%; }
+.lib-ortag{ position:absolute; inset-inline-end:1rem; top:1rem; font-size:.62rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:rgba(255,255,255,.78); }
+.lib-orgtag{ position:absolute; inset-inline:1rem; bottom:.7rem; font-size:.66rem; font-weight:700; color:rgba(255,255,255,.85); line-height:1.4; }
+.lib-body{ padding:.9rem 1.1rem; background:var(--bg-card); }
+.lib-body h3{ font-weight:800; color:var(--brand-dark); font-size:.98rem; line-height:1.4; }
+html[data-theme="dark"] .lib-body h3{ color:#EAF6FB; }
+.lib-src{ display:flex; align-items:center; gap:.45rem; font-size:.72rem; color:var(--muted); margin-top:.3rem; }
+.lib-src i{ color:var(--gold); font-size:.66rem; }
+.lib-body p{ margin-top:.5rem; color:var(--muted); font-size:.8rem; line-height:1.6; }
+.lib-desc{ display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+.lib-btns{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top:.7rem; }
+.lib-btn{ display:inline-flex; align-items:center; gap:.4rem; font-weight:700; font-size:.76rem; border-radius:9999px; padding:.42rem .95rem; transition:all .25s ease; border:1.5px solid var(--brand); color:var(--brand-dark); background:transparent; cursor:pointer; }
+.lib-btn:hover{ background:var(--brand); color:#17324D; }
+html[data-theme="dark"] .lib-btn{ border-color:#7FD9EA; color:#7FD9EA; }
+html[data-theme="dark"] .lib-btn:hover{ background:#7FD9EA; color:#0F172A; }
+.lib-btn.gold{ background:var(--gold); color:#17324D; border-color:transparent; }
+.lib-btn.gold:hover{ background:#E2B45C; transform:translateY(-1px); }
+.lib-filter{ display:inline-flex; align-items:center; font-size:.74rem; font-weight:700; letter-spacing:.03em; padding:.35rem .85rem; border-radius:9999px; border:1px solid rgba(8,184,217,.32); color:#087F9B; background:rgba(8,184,217,.08); cursor:pointer; transition:all .2s ease; }
+html[data-theme="dark"] .lib-filter{ color:#7FD9EA; }
+.lib-filter.active{ background:var(--brand); color:#17324D; border-color:var(--brand); }
+.field{ width:100%; background:var(--bg-card); border:1.5px solid var(--border); border-radius:.9rem; padding:.85rem 1.1rem; font-size:.92rem; color:var(--text); outline:none; transition:border-color .2s,box-shadow .2s; }
+.field:focus{ border-color:var(--brand); box-shadow:0 0 0 3px rgba(8,184,217,.18); }
+.info-row{ display:flex; align-items:center; gap:.9rem; }
+.info-ic{ width:2.7rem; height:2.7rem; border-radius:.85rem; background:rgba(8,184,217,.10); color:#087F9B; display:flex; align-items:center; justify-content:center; flex-shrink:0; border:1px solid rgba(8,184,217,.32); }
+html[data-theme="dark"] .info-ic{ color:#7FD9EA; }
+#footer{ background:var(--brand-dark); color:rgba(255,255,255,.82); }
+#footer h4{ color:#fff; font-weight:800; font-size:.95rem; margin-bottom:1rem; }
+.foot-link{ display:inline-block; padding:.3rem 0; font-size:.88rem; color:rgba(255,255,255,.72); transition:color .2s,transform .2s; }
+.foot-link:hover{ color:var(--accent-light); transform:translateX(3px); }
+#toast{ position:fixed; bottom:1.5rem; left:50%; transform:translate(-50%,150%); z-index:120; background:var(--brand); color:#17324D; font-weight:600; font-size:.88rem; padding:.9rem 1.5rem; border-radius:9999px; box-shadow:0 18px 40px rgba(4,24,36,.4); border:1px solid rgba(8,184,217,.5); transition:transform .45s cubic-bezier(.34,1.4,.44,1); display:flex; align-items:center; gap:.6rem; }
+#toast.show{ transform:translate(-50%,0); }
+</style>
+</head>
+<body class="antialiased lang-am">
+
+<!-- TOP BAR -->
+<div id="topbar" class="fixed top-0 inset-x-0 z-[55]">
+  <div class="container-x flex items-center justify-between gap-3 h-[2.1rem]">
+    <div class="flex items-center gap-3 min-w-0 overflow-hidden whitespace-nowrap opacity-90">
+      <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-gold"></i><span data-i18n="top_addr">ወልቂጤ ከተማ፣ ኢትዮጵያ</span></span>
+    </div>
+    <div class="flex items-center gap-2 shrink-0">
+      <button id="themeToggle" class="w-6 h-6 rounded-full hover:bg-white/10 flex items-center justify-center text-[.8rem]" aria-label="Toggle theme"><i id="themeIcon" class="fa-solid fa-moon"></i></button>
+      <button id="langToggle" class="flex items-center gap-1 text-[11px] font-bold rounded-full border border-white/25 px-2.5 py-0.5" aria-label="Switch language">
+        <span id="langAm" class="lang-pill on px-1">አማ</span><span class="opacity-40">|</span><span id="langEn" class="lang-pill px-1">EN</span>
+      </button>
+      <button id="menuBtn" class="lg:hidden w-7 h-7 rounded-full hover:bg-white/10 flex items-center justify-center" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN NAVIGATION — exactly 7 items (.update — Media added as the 7th) -->
+<nav id="mainNav" aria-label="Main navigation">
+  <div class="container-x flex items-center justify-between" style="height:4.25rem">
+    <a href="#home" data-scroll class="nav-brand flex items-center gap-3">
+      <span class="logo-badge"><img src="main_logo.jpg" alt="የወልቂጤ ከተማ ብልጽግና ፓርቲ አርማ" width="44" height="44"></span>
+      <span class="leading-tight">
+        <span class="block font-extrabold text-[.95rem]" style="color:var(--brand-dark)" data-i18n="brand_short">የወልቂጤ ከተማ ብልጽግና ፓርቲ</span>
+        <span class="block text-[.68rem] font-semibold tracking-wide" style="color:var(--muted)" data-i18n="brand_sub">Wolkite City Prosperity Party</span>
+      </span>
+    </a>
+    <div class="hidden lg:flex items-center gap-0.5" id="desktopMenu">
+      <a href="#home"       data-scroll class="nav-link" data-nav="home"       data-i18n="nav_home">ዋና ገፅ</a>
+      <a href="#about"      data-scroll class="nav-link" data-nav="about"      data-i18n="nav_about">ስለ እኛ</a>
+      <a href="#leadership" data-scroll class="nav-link" data-nav="leadership" data-i18n="nav_leadership">አመራር</a>
+      <a href="#activities" data-scroll class="nav-link" data-nav="activities" data-i18n="nav_activities">እንቅስቃሴዎች</a>
+      <a href="#news"       data-scroll class="nav-link" data-nav="news"       data-i18n="nav_news">ዜና</a>
+      <a href="#media"      data-scroll class="nav-link" data-nav="media"      data-i18n="nav_media">ሚዲያ</a>
+      <a href="#contact" data-scroll class="btn btn-gold ml-2 !py-2.5 !px-5 !text-[.85rem]" data-i18n="nav_contact">ያግኙን</a>
+    </div>
+  </div>
+</nav>
+<!-- Mobile menu — 7 items -->
+<div id="mobileMenu" class="fixed top-0 right-0 h-full w-80 max-w-[86vw] z-[70] overflow-y-auto lg:hidden" style="background:var(--bg-card)">
+  <div class="flex items-center justify-between px-5 h-16" style="background:var(--brand-dark)">
+    <span class="font-bold text-sm text-white" data-i18n="brand_short">የወልቂጤ ከተማ ብልጽግና ፓርቲ</span>
+    <button id="mobileClose" class="w-9 h-9 flex items-center justify-center rounded-full hover:bg-white/10 text-white text-xl" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="p-3 space-y-1" aria-label="Mobile navigation">
+    <a href="#home"       data-scroll class="m-link flex items-center gap-3 px-3.5 py-3 rounded-xl text-[15px] font-medium hover:bg-brand/5"><i class="fa-solid fa-house w-5 text-center text-brand"></i><span data-i18n="nav_home">ዋና ገፅ</span></a>
+    <a href="#about"      data-scroll class="m-link flex items-center gap-3 px-3.5 py-3 rounded-xl text-[15px] font-medium hover:bg-brand/5"><i class="fa-solid fa-circle-info w-5 text-center text-brand"></i><span data-i18n="nav_about">ስለ እኛ</span></a>
+    <a href="#leadership" data-scroll class="m-link flex items-center gap-3 px-3.5 py-3 rounded-xl text-[15px] font-medium hover:bg-brand/5"><i class="fa-solid fa-user-tie w-5 text-center text-brand"></i><span data-i18n="nav_leadership">አመራር</span></a>
+    <a href="#activities" data-scroll class="m-link flex items-center gap-3 px-3.5 py-3 rounded-xl text-[15px] font-medium hover:bg-brand/5"><i class="fa-solid fa-people-group w-5 text-center text-brand"></i><span data-i18n="nav_activities">እንቅስቃሴዎች</span></a>
+    <a href="#news"       data-scroll class="m-link flex items-center gap-3 px-3.5 py-3 rounded-xl text-[15px] font-medium hover:bg-brand/5"><i class="fa-solid fa-newspaper w-5 text-center text-brand"></i><span data-i18n="nav_news">ዜና</span></a>
+    <a href="#media"      data-scroll class="m-link flex items-center gap-3 px-3.5 py-3 rounded-xl text-[15px] font-medium hover:bg-brand/5"><i class="fa-solid fa-photo-film w-5 text-center text-brand"></i><span data-i18n="nav_media">ሚዲያ</span></a>
+    <a href="#contact"    data-scroll class="m-link flex items-center gap-3 px-3.5 py-3 rounded-xl text-[15px] font-medium hover:bg-brand/5"><i class="fa-solid fa-envelope w-5 text-center text-brand"></i><span data-i18n="nav_contact">ያግኙን</span></a>
+  </nav>
+</div>
+<div id="mobileBackdrop" class="fixed inset-0 z-[65] lg:hidden" style="background:rgba(6,20,32,.55)"></div>
+
+<!-- ============================================================
+     1 · HOME — main landing (#home)
+     ============================================================ -->
+<header id="home">
+<section id="hero" aria-label="Hero">
+  <div class="car-slide active"><img src="mu1.jpg" alt="የወልቂጤ ከተማ ማህበረሰብ ተሳትፎ — Community activity" loading="lazy"><span class="slide-tint"></span></div>
+  <div class="car-slide"><img src="news1.jpg" alt="የወልቂጤ ከተማ የልማት ተግባራት — Community development" loading="lazy"><span class="slide-tint"></span></div>
+  <div class="car-slide"><img src="news111.jpg" alt="የወጣቶች ተግባራት — Youth work" loading="lazy"><span class="slide-tint"></span></div>
+  <div class="hero-overlay" style="background:linear-gradient(100deg,rgba(7,32,48,.55) 0%,rgba(8,74,94,.45) 60%,transparent 100%)"></div>
+  <div class="container-x relative z-[5] w-full">
+    <div class="hero-content">
+      <span class="hero-badge"><span data-i18n="hero_badge">የወልቂጤ ከተማ ብልጽግና ፓርቲ</span></span>
+      <h1 class="hero-title" style="margin-top:1.3rem" data-i18n="hero_title">የወልቂጤ ከተማ ብልጽግና ፓርቲ</h1>
+      <p class="hero-sub prose-body" data-i18n="hero_sub">የወልቂጤ ከተማ ብልጽግና ፓርቲ ቅርንጫፍ — በመደመር የአህበረሰብ ተሳትፎ፣ የአካባቢ ጥበቃና የልማት ተግባራት።</p>
+      <div class="mt-8 flex flex-wrap items-center gap-3.5">
+        <a href="#about" data-scroll class="btn btn-gold"><i class="fa-solid fa-circle-info"></i><span data-i18n="hero_cta1">የፓርቲውን ይወቁ</span></a>
+        <a href="#news" data-scroll class="btn btn-ghost"><i class="fa-solid fa-newspaper"></i><span data-i18n="hero_cta2">አዳዲስ መረጃዎች</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="absolute bottom-7 z-[6]" style="inset-inline-start:0; inset-inline-end:0">
+    <div class="container-x flex items-center justify-between">
+      <button id="heroPrev" class="lb-btn !w-10 !h-10" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></button>
+      <div id="heroDots" class="flex items-center gap-2" role="tablist" aria-label="Slides">
+        <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+      </div>
+      <button id="heroNext" class="lb-btn !w-10 !h-10" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+</header>
+<!-- ============================================================
+     2 · ABOUT — merged main section (#about) — 7 subsections (.update)
+     A ስለ እኛ · B ራዕይ (#vision, in #vmo) · C ተልዕኮ (#mission, in #vmo) · D እሴቶች (#values)
+     · E ዓላማዎች (#objectives) · F የትኩረት መስኮች (#focus) · G ዲጂታል ቤተ-መጻሕፍት (#library)
+     ============================================================ -->
+<section id="about" class="section">
+  <div class="container-x">
+
+    <!-- A · ስለ እኛ -->
+    <div class="grid gap-14 lg:grid-cols-2 lg:items-center">
+      <div class="reveal">
+        <span class="eyebrow" data-i18n="about_eyebrow">ስለ እኛ</span>
+        <h2 class="h2" style="margin-top:.9rem" data-i18n="about_title">ስለ ፓርቲው</h2>
+        <span class="chip" style="margin-top:1rem"><i class="fa-solid fa-shield-halved"></i><span data-i18n="about_official">የወልቂጤ ከተማ ብልጽግና ፓርቲ ይፋዊ ድረ-ገፅ።</span></span>
+        <p class="sub prose-body" data-i18n="about_body">የወልቂጤ ከተማ ብልጽግና ፓርቲ ቅርንጫፍ በጉራጌ ዞን የአስተዳደር ማዕከል በሆነችው በወልቂጤ ከተማ የሚሰራ የብልጽግና ፓርቲ ቅርንጫፍ ነው። በከተማዋ ክፍለ ከተሞችና በቀበሌዎች ተደራጅቶ በአካባቢ ጥበቃ፣ በማኅበረሰብ ተሳትፎና በልማት ተግባራት ላይ ይሰራል።</p>
+        <div class="mt-6 grid gap-3.5 sm:grid-cols-2">
+          <div class="vm-card">
+            <h4><i class="fa-solid fa-tree-city text-gold"></i><span data-i18n="about_areas1_t">ተግባራት</span></h4>
+            <p data-i18n="about_areas1">የአካባቢ ጥበቃ፣ ዛፍ ተክልና የአረንጋዴ እንክብካቤ</p>
+          </div>
+          <div class="vm-card">
+            <h4><i class="fa-solid fa-handshake-angle text-gold"></i><span data-i18n="about_areas2_t">ተሳትፎ</span></h4>
+            <p data-i18n="about_areas2">የሰፈር ኮሚቴዎችና የአህበረሰብ ውይይት መድረኮች</p>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-1">
+        <div class="about-media">
+          <div class="w-full h-full flex flex-col items-center justify-center gap-4" style="background:linear-gradient(135deg,var(--brand-dark),#0A4256)">
+            <span class="logo-badge" style="width:7rem;height:7rem"><img src="main_logo.jpg" alt="የወልቂጤ ከተማ ብልጽግና ፓርቲ አርማ" width="112" height="112"></span>
+            <h3 class="text-white font-extrabold text-xl text-center leading-snug" data-i18n="brand_full">የወልቂጤ ከተማ ብልጽግና ፓርቲ</h3>
+            <p class="text-goldLight text-sm mt-1" data-i18n="brand_sub2">Wolkite City Prosperity Party</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- B · ራዕይ / Vision (#vision)  +  C · ተልዕኮ / Mission (#mission) — grouped under #vmo -->
+    <div id="vmo" class="mt-16">
+      <div id="vision">
+        <div class="subsec-head reveal"><h3 data-i18n="vision_head">ራዕይ</h3></div>
+        <div class="vision-grid grid gap-6 md:grid-cols-3 mt-8">
+        <div class="vmo-card reveal">
+          <span class="year"><i class="fa-solid fa-calendar-days"></i>ራዕይ 2018</span>
+          <h3 data-i18n="v2018">ከተስፋ ወደ ሚጨበጥ ብረሀን</h3>
+          <p data-i18n="v2018_d">የወጣቶች ተሳትፎ የተጠናከረበት ብሩህ የከተማ ራዕይ።</p>
+        </div>
+        <div class="vmo-card reveal reveal-1">
+          <span class="year"><i class="fa-solid fa-calendar-days"></i>ራዕይ 2023</span>
+          <h3 data-i18n="v2023">የአፍሪካ ብልፅግና ተምሳሌት</h3>
+          <p data-i18n="v2023_d">በመደመር ወደ የአፍሪካ የብልጽግና አርአያነት ማደግ።</p>
+        </div>
+        <div class="vmo-card reveal reveal-2">
+          <span class="year"><i class="fa-solid fa-calendar-days"></i>ራዕይ 2040</span>
+          <h3 data-i18n="v2040">አለም አቀፍ የብልፅግና አርአያ</h3>
+          <p data-i18n="v2040_d">የትውልድ ተሳትፎ በማዕከልነት ወደ አለም አቀፍ ደረጃ ማድረግ።</p>
+        </div>
+      </div>
+      <div id="mission" class="mt-12">
+        <div class="subsec-head reveal"><h3 data-i18n="mission_head">ተልዕኮ</h3></div>
+        <div class="mt-6 reveal">
+        <div class="mission-quote max-w-3xl mx-auto text-center">
+          <h3 class="text-white/85 font-bold text-sm" data-i18n="mission_t">ተልዕኮ / አጠቃላይ አላማ</h3>
+          <p style="margin-top:.8rem" data-i18n="mission_q">“የበለጸገች ኢትዮጵያን እውን ማድረግ”</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- D · እሴቶች / Values  (#values) -->
+    <div id="values" class="mt-16">
+      <div class="subsec-head reveal"><h3 data-i18n="values_title">የእሴቶች</h3></div>
+      <p class="sub" data-i18n="values_sub">የእንቅስቃሴያችን የሚመሩ መሠረታዊ እሴቶች</p>
+      <div id="valuesGrid" class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </div>
+
+    <!-- E · ዓላማዎች / Objectives  (#objectives) -->
+    <div id="objectives" class="mt-16">
+      <div class="subsec-head reveal"><h3 data-i18n="obj_title">ዓላማዎች</h3></div>
+      <div id="objectivesGrid" class="mt-6 grid gap-4 md:grid-cols-2"></div>
+    </div>
+
+    <!-- F · የትኩረት መስኮች / Areas of Focus  (#focus) — themes only, no achievements claimed (.update) -->
+    <div id="focus" class="mt-16">
+      <div class="subsec-head reveal"><h3 data-i18n="focus_title">የትኩረት መስኮች</h3></div>
+      <p class="sub" data-i18n="focus_sub">በድረ-ገፁ ላይ የሚታዩ ጭብጦች — እንደ የትኩረት መስኮች ተደራጅተዋል።</p>
+      <div id="focusGrid" class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </div>
+
+    <!-- F · ዲጂታል ቤተ-መጻሕፍት / Digital Library  (#library) — subsection of About (.update Part 4) -->
+    <div id="library" class="mt-16">
+      <div class="subsec-head reveal"><h3 data-i18n="library_title">ዲጂታል ቤተ-መጻሕፍት</h3></div>
+      <p class="sub" data-i18n="library_sub">ስለ ብልጽግና፣ መደመር፣ የኢትዮጵያ ልማትና ኢኮኖሚ የሚጠቅሙ የተረጋገጡ ውጫዊ ምንጮች — ብዛቱ ይስፋፋል።</p>
+      <div class="lib-toolbar mt-6 reveal">
+        <input id="libSearch" type="search" class="field lib-search" data-i18n-ph="library_search_ph" placeholder="ፈልግ..." aria-label="Digital library search">
+        <div id="libFilters" class="flex flex-wrap gap-2" role="group" aria-label="Digital library category filters"></div>
+      </div>
+      <div id="libGrid" class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
+      <p class="mt-7 text-xs" style="color:var(--muted)"><i class="fa-solid fa-shield-halved text-gold mr-2"></i><span data-i18n="library_note">ሁሉም ማስፈንጠሪያዎች ውጫዊ ናቸው፤ በአዲስ ትር ይከፈታሉ።</span></p>
+    </div>
+
+  </div>
+</section>
+<!-- ============================================================
+     3 · LEADERSHIP — main section (#leadership) — all 7 leaders
+     ============================================================ -->
+<section id="leadership" class="section">
+  <div class="container-x">
+    <div class="text-center reveal">
+      <span class="eyebrow" data-i18n="lead_eyebrow">አመራር</span>
+      <h2 class="h2" style="margin-top:.9rem" data-i18n="lead_title">የፓርቲው አመራሮች</h2>
+      <p class="sub mx-auto text-center" data-i18n="lead_sub">የወልቂጤ ከተማ ብልጽግና ፓርቲ ቅርንጫፍ አመራር ቡድን</p>
+    </div>
+    <div id="leaderGrid" class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"></div>
+    <p class="mt-8 text-center text-xs" style="color:var(--muted)">
+      <i class="fa-regular fa-hand-pointer text-gold"></i>
+      <span data-i18n="lead_hint">ዝርዝር መገለጫ ለማየት ካርዱን ይንኩ</span>
+    </p>
+  </div>
+</section>
+
+<!-- Leadership profile modal -->
+<div id="leaderModal" role="dialog" aria-modal="true" aria-label="Leader profile">
+  <button id="leaderModalClose" class="absolute top-5 right-5 w-11 h-11 rounded-full text-white text-xl flex items-center justify-center" style="background:rgba(255,255,255,.12)" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <div class="leader-sheet" id="leaderSheet"></div>
+</div>
+
+<!-- ============================================================
+     4 · ACTIVITIES — merged main section (#activities)
+     Subsections: A ተፅእኖ (#impact) · B እንቅስቃሴዎች (#activities-content) · C ማዕከለ ስዕላት (#gallery)
+     ============================================================ -->
+<section id="activities" class="section">
+  <div class="container-x">
+
+    <!-- A · ተፅእኖ / Impact  (#impact) — NO invented numbers -->
+    <div id="impact">
+      <div class="subsec-head reveal"><h3 data-i18n="impact_title">የማኅበረሰብ ተፅእኖ</h3></div>
+      <p class="sub" data-i18n="impact_note">አሃዞች ሲረጋገጡ ይለቀቃሉ — ለአሁኑ ገለልተኛ ቦታ ያዢ።</p>
+      <div id="statsGrid" class="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"></div>
+    </div>
+
+    <!-- B · እንቅስቃሴዎች / Activities  (#activities-content) -->
+    <div id="activities-content" class="mt-16">
+      <div class="subsec-head reveal"><h3 data-i18n="act_title">የእንቅስቃሴዎች</h3></div>
+      <p class="sub" data-i18n="act_sub">የአካባቢ ጥበቃ፣ የማኅበረሰብ ተሳትፎ እና የወጣቶች ተግባራት</p>
+      <div id="actGrid" class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </div>
+
+    <!-- C · ማዕከለ ስዕላት / Gallery  (#gallery) — real photos -->
+    <div id="gallery" class="mt-16">
+      <div class="subsec-head reveal"><h3 data-i18n="gal_title">ማዕከለ ስዕላት</h3></div>
+      <p class="sub" data-i18n="gal_sub">የእንቅስቃሴ ፎቶዎች</p>
+      <div id="galFilters" class="mt-6 flex flex-wrap justify-center gap-2 reveal" aria-label="Gallery filters"></div>
+      <div id="galleryGrid" class="gal-wrap mt-5"></div>
+    </div>
+
+  </div>
+</section>
+
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button id="lbClose" class="lb-btn absolute top-5 right-5 text-xl" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <button id="lbPrev" class="lb-btn absolute left-3 sm:left-8 top-1/2 -translate-y-1/2" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+  <img id="lightboxImg" src="" alt="">
+  <button id="lbNext" class="lb-btn absolute right-3 sm:right-8 top-1/2 -translate-y-1/2" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+<!-- ============================================================
+     5 · NEWS — main section (#news) — Youth Wing Facebook source
+     ============================================================ -->
+<section id="news" class="section">
+  <div class="container-x">
+    <div class="flex flex-wrap items-end justify-between gap-6 reveal">
+      <div>
+        <span class="eyebrow" data-i18n="news_eyebrow">ዜና</span>
+        <h2 class="h2" style="margin-top:.9rem" data-i18n="news_title">አዳዲስ መረጃዎች</h2>
+        <p class="sub" data-i18n="news_sub">የወልቂጤ ከተማ ወጣቶች ክንፍ Facebook ገጽ ላይ የተለቀቁ የቅርብ ጊዜ ዜናዎች — ገና ከተገናኘ በኋላ ይታያል።</p>
+      </div>
+    </div>
+    <div id="fbNewsGrid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- News article view (native, in-page — .update PART 2) -->
+<div id="newsModal" role="dialog" aria-modal="true" aria-label="News article">
+  <button id="newsModalClose" class="absolute top-5 right-5 w-11 h-11 rounded-full text-white text-xl flex items-center justify-center" style="background:rgba(255,255,255,.12)" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <article class="news-sheet" id="newsSheet"></article>
+</div>
+
+<!-- ============================================================
+     6 · MEDIA — main section (#media) — official social channels
+     Facebook = verified news-source page; other platforms pending
+     official URLs (kept inactive — no invented links)
+     ============================================================ -->
+<section id="media" class="section">
+  <div class="container-x">
+    <div class="text-center reveal">
+      <span class="eyebrow" data-i18n="media_eyebrow">ሚዲያ</span>
+      <h2 class="h2" style="margin-top:.9rem" data-i18n="media_title">ሚዲያ</h2>
+      <p class="sub mx-auto text-center" data-i18n="media_sub">ይፋዊ ማህበራዊ ሚዲያ ገጾች — ኦፊሴላዊ አድራሻዎች ሲረጋገጡ ይጨመራሉ።</p>
+    </div>
+    <div id="mediaGrid" class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4" role="list"></div>
+    <p class="mt-7 text-xs text-center" style="color:var(--muted)"><i class="fa-solid fa-shield-halved text-gold mr-2"></i><span data-i18n="media_note">የመድረክ አድራሻዎች እስከሚረጋገጡ ድረስ አይነቃነቁም።</span></p>
+  </div>
+</section>
+
+<!-- ============================================================
+     6 · CONTACT — main section (#contact) — email/website/Telegram EMPTY
+     ============================================================ -->
+<section id="contact" class="section">
+  <div class="container-x grid gap-12 lg:grid-cols-2 lg:items-start">
+    <div class="reveal">
+      <span class="eyebrow" data-i18n="contact_eyebrow">ግንኙነት</span>
+      <h2 class="h2" style="margin-top:.9rem" data-i18n="contact_title">ያግኙን</h2>
+      <p class="sub" data-i18n="contact_sub">ሀሳብ፣ ጥያቄ ካለዎት እባክዎን ይጽፉልን</p>
+      <div class="mt-8 space-y-4">
+        <div class="info-row">
+          <span class="info-ic"><i class="fa-solid fa-location-dot"></i></span>
+          <div><h4 class="font-extrabold text-[.92rem]" data-i18n="ct_office_t">አድራሻ</h4><p class="text-sm mt-0.5" style="color:var(--muted)" data-i18n="ct_addr">ወልቂጤ ከተማ፣ ኢትዮጵያ</p></div>
+        </div>
+        <div class="info-row" id="contactEmailRow" style="display:none">
+          <span class="info-ic"><i class="fa-regular fa-envelope"></i></span>
+          <div><h4 class="font-extrabold text-[.92rem]" data-i18n="ct_email_t">ኢሜይል</h4><p class="text-sm mt-0.5" style="color:var(--muted)" data-i18n="ct_email_ph">[ኢሜይል ሲያገኝ ይረሳል]</p></div>
+        </div>
+        <div class="info-row" id="contactTelegramRow" style="display:none">
+          <span class="info-ic"><i class="fa-brands fa-telegram"></i></span>
+          <div><h4 class="font-extrabold text-[.92rem]" data-i18n="ct_tg_t">ቴሌግራም</h4><p class="text-sm mt-0.5" style="color:var(--muted)" data-i18n="ct_tg_ph">[ያስገባል]</p></div>
+        </div>
+      </div>
+    </div>
+    <form id="contactForm" class="reveal reveal-1 card p-7 sm:p-9" novalidate>
+      <h3 class="font-extrabold text-brandDark" style="font-size:1.1rem" data-i18n="form_title">መልዕክት ይላኩ</h3>
+      <p class="text-xs mt-1" style="color:var(--muted)" data-i18n="form_note">መልዕክት የሚላከው ይፋዊ አድራሻ ሲዘጋጅ ነው።</p>
+      <div class="mt-5 space-y-4">
+        <div>
+          <label class="text-xs font-bold" style="color:var(--muted)" for="fName" data-i18n="form_name_l">ሙሉ ስም</label>
+          <input id="fName" type="text" class="field mt-1.5" data-i18n-ph="form_name_ph" placeholder="ሙሉ ስም" required>
+        </div>
+        <div>
+          <label class="text-xs font-bold" style="color:var(--muted)" for="fEmail" data-i18n="form_email_l">ኢ-ሜይል</label>
+          <input id="fEmail" type="email" class="field mt-1.5" data-i18n-ph="form_email_ph" placeholder="ኢ-ሜይል" required>
+        </div>
+        <div>
+          <label class="text-xs font-bold" style="color:var(--muted)" for="fMsg" data-i18n="form_msg_l">መልዕክት</label>
+          <textarea id="fMsg" rows="5" class="field mt-1.5 resize-none" data-i18n-ph="form_msg_ph" placeholder="መልዕክትዎ..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-gold w-full" data-i18n="send_msg" disabled>መልዕክት ይላኩ</button>
+        <p class="text-xs mt-1 text-center" style="color:var(--muted)" data-i18n="form_disabled">የመላኪያ አገልግሎት እስኪዘጋጅ ድረስ ቦታ ያዢ ነው።</p>
+      </div>
+    </form>
+  </div>
+</section>
+<!-- ============================================================
+     FOOTER — secondary links to subsections allowed
+     ============================================================ -->
+<footer id="footer">
+  <div class="container-x pt-14 pb-8">
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <div class="flex items-center gap-3">
+          <span class="logo-badge"><img src="main_logo.jpg" alt="የወልቂጤ ከተማ ብልጽግና ፓርቲ አርማ" width="44" height="44"></span>
+          <span class="font-extrabold text-white text-sm leading-snug" data-i18n="brand_short">የወልቂጤ ከተማ ብልጽግና ፓርቲ</span>
+        </div>
+        <p class="mt-4 text-[.85rem] leading-relaxed prose-body" style="color:rgba(255,255,255,.66)" data-i18n="foot_desc">የወልቂጤ ከተማ ብልጽግና ፓርቲ ይፋዊ ድህረ-ገፅ።</p>
+      </div>
+      <div>
+        <h4 data-i18n="foot_mains">ዋና ክፍሎች</h4>
+        <a href="#about"      data-scroll class="foot-link block" data-i18n="nav_about">ስለ እኛ</a>
+        <a href="#leadership" data-scroll class="foot-link block" data-i18n="nav_leadership">አመራር</a>
+        <a href="#activities" data-scroll class="foot-link block" data-i18n="nav_activities">እንቅስቃሴዎች</a>
+        <a href="#news"       data-scroll class="foot-link block" data-i18n="nav_news">ዜና</a>
+        <a href="#media"      data-scroll class="foot-link block" data-i18n="nav_media">ሚዲያ</a>
+        <a href="#contact"    data-scroll class="foot-link block" data-i18n="nav_contact">ያግኙን</a>
+      </div>
+      <div>
+        <h4 data-i18n="foot_subs">ክፍል አገናኞች</h4>
+        <a href="#vmo"        data-scroll class="foot-link block" data-i18n="foot_vm">ራዕይ / ተልዕኮ</a>
+        <a href="#values"     data-scroll class="foot-link block" data-i18n="nav_values">እሴቶች</a>
+        <a href="#objectives" data-scroll class="foot-link block" data-i18n="nav_objectives">ዓላማዎች</a>
+        <a href="#focus"      data-scroll class="foot-link block" data-i18n="focus_title">የትኩረት መስኮች</a>
+        <a href="#impact"     data-scroll class="foot-link block" data-i18n="nav_impact">ተፅእኖ</a>
+        <a href="#gallery"    data-scroll class="foot-link block" data-i18n="nav_gallery">ማዕከለ ስዕላት</a>
+        <a href="#library"    data-scroll class="foot-link block" data-i18n="library_title">ዲጂታል ቤተ-መጻሕፍት</a>
+      </div>
+      <div>
+        <h4 data-i18n="foot_contact">ያግኙን</h4>
+        <p class="text-[.85rem] prose-body" style="color:rgba(255,255,255,.66)"><i class="fa-solid fa-location-dot text-gold mr-2"></i><span data-i18n="ct_addr">ወልቂጤ ከተማ፣ ኢትዮጵያ</span></p>
+      </div>
+    </div>
+    <div class="mt-12 pt-6 text-center" style="border-top:1px solid rgba(255,255,255,.12)">
+      <p class="text-[.72rem] mt-1.5" style="color:rgba(255,255,255,.5)">© <span id="year"></span> <span data-i18n="brand_full">የወልቂጤ ከተማ ብልጽግና ፓርቲ</span> — <span data-i18n="foot_rights">መብቱ በህግ የተጠበቀ</span></p>
+    </div>
+  </div>
+</footer>
+
+<div id="toast" role="status"><i class="fa-solid fa-circle-check text-gold"></i><span id="toastMsg"></span></div>
+<script src="facebook-news.js"></script>
+<script>
+/* ================================================================
+   Wolkite City Prosperity Party — website (.update navigation consolidation)
+   Content: .update (authoritative) + main_logo.jpg + supplied photos.
+   News source: Wolkite City Youth Wing Facebook Page.
+   No names/roles/statistics/contact info are invented.
+   ================================================================ */
+'use strict';
+const $  = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const escHtml = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const imgUri  = f => encodeURI(f);
+let LANG = localStorage.getItem('wk_lang') || 'am';
+
+/* --- Leadership (exact names, roles, photos) --- */
+const LEADERS = [
+  { nameAm:'አቶ ሙባረክ ኸሊል አህመድ', nameEn:'Mubarak Khalil Ahmed',
+    titleAm:'የወ/ከ/አ/ብ/ፓ/የሰው ሀብትና ፋይናንሰ ዘርፍ ኃላፊ', titleEn:'Head, Human Resources & Finance Sector',
+    photo:'አቶሙባረክኸሊልአህመድ.jpg' },
+  { nameAm:'ሂዲያ ሙህዲን', nameEn:'Hidiya Muhidin',
+    titleAm:'የወጣቶች ክንፍ ሀላፊ', titleEn:'Head of Youth Wing',
+    photo:'ሂዲያሙህዲን.jpg' },
+  { nameAm:'አቶ ሐሰን ጀማል ሰማን', nameEn:'Hassen Jamal Saman',
+    titleAm:'የወልቂጤ ከተማ የብልጽግና ፓርቲ ኢንስፔክሽን ስነ -ምግባር ኮሚሽን ጽ/ቤት ሃላፊ', titleEn:'Head, Wolkite City Prosperity Party Inspection & Ethics Commission Office',
+    photo:'አቶሐሰንጀማልሰማን.jpg' },
+  { nameAm:'ወ/ሮ ግጥም ባደታ', nameEn:'W/ro Getim Badata',
+    titleAm:'የወልቂጤ ከተማ የብልጽግና ፓርቲ ሴቶች ክንፍ ሃላፊ', titleEn:"Head, Wolkite City Prosperity Party Women's Wing",
+    photo:'ወሮ ግጥምባደታ.jpg' },
+  { nameAm:'አቶ ሰፋ ዘይኑ ያሲን', nameEn:'Seifu Zeynu Yasin',
+    titleAm:'የአደረጃጀት ዘርፍ ሀላፊ', titleEn:'Head of Organizational Sector',
+    photo:'አቶሰፋዘይኑያሲን.jpg' },
+  { nameAm:'አቶ አስራት ታደለ', nameEn:'Asrat Tadele',
+    titleAm:'የፖለቲካ ዘርፍ ሀላፊ', titleEn:'Head of Political Sector',
+    photo:'አቶአስራትታደለ.jpg' },
+  { nameAm:'አቶ ታደለ በቀለ', nameEn:'Tadele Bekele',
+    titleAm:'የወልቂጤ ከተማ አስተዳደር ብልፅግና ፖርቲ ጽ/ቤት ሀላፊ', titleEn:'Head, Wolkite City Administration Prosperity Party Office',
+    photo:'አቶታደለበቀለ.jpg' }
+];
+
+/* --- Objectives (exact text) --- */
+const OBJECTIVES = [
+  { am:'ጠንካራ፣ ዴሞክራሲያዊ፣ ቅቡልነት ያለው፣ ዘላቂ ሀገረ-መንግሥትና ኅብረብሔራዊ አንድነት መገንባት፤', en:'Build a strong, democratic, accepted and enduring state with national unity.' },
+  { am:'ልማትና ፍትሐዊ ተጠቃሚነትን የሚያረጋግጥ አካታች የኢኮኖሚ ሥርዓት መገንባት፤', en:'Build an inclusive economy guaranteeing development and fair benefit.' },
+  { am:'ሁለንተናዊ ብልጽግናን የሚያሰፍን ማኅበራዊ ልማትን ማረጋገጥ፤', en:'Ensure social development that spreads universal prosperity.' },
+  { am:'ሀገራዊ ክብርንና ጥቅምን ማዕከል ያደረገ የውጭ ግንኙነት ማካሄድ፡፡', en:'Conduct foreign relations centred on national dignity and interest.' }
+];
+
+/* --- Values (exact labels with neutral explanations) --- */
+const VALUES = [
+  { am:'ህብረ ብሔራዊ አንድነት', en:'National Unity', icon:'fa-people-group',
+    amD:'የኢትዮጵያ ህዝቦች አንድነትና አብሮነት', enD:'Unity and togetherness of the peoples of Ethiopia.' },
+  { am:'የዜጎች ክብር', en:'Dignity of Citizens', icon:'fa-hand-holding-heart',
+    amD:'የዜጎች ክብርና መብት የሚከበርበት ማኅበረሰብ', enD:'A society where citizens\u2019 dignity and rights are respected.' },
+  { am:'ነጻነት', en:'Freedom', icon:'fa-dove',
+    amD:'የነጻነትና የራስ የመሪነት መርሆዎች', enD:'The principles of freedom and self-determination.' }
+];
+
+/* --- Areas of Focus (.update — themes already reflected by existing site content;
+     NOT achievement claims. Icons/labels only.) --- */
+const FOCUS_AREAS = [
+  { am:'የማኅበረሰብ ተሳትፎ', en:'Community Participation', icon:'fa-people-group' },
+  { am:'የወጣቶች ተሳትፎ',   en:'Youth Participation',      icon:'fa-person-hiking' },
+  { am:'የሴቶች ተሳትፎ',    en:"Women's Participation",    icon:'fa-person-dress' },
+  { am:'የአካባቢ ጥበቃ',     en:'Environmental Care',       icon:'fa-tree' },
+  { am:'ማኅበራዊ ልማት',     en:'Social Development',       icon:'fa-handshake-angle' },
+  { am:'የኢትዮጵያ ልማት',   en:'Ethiopia Development',     icon:'fa-earth-africa' }
+];
+
+/* --- Impact statistics (NO numbers, neutral placeholder) --- */
+const STATS = [
+  { key:'st_members',     icon:'fa-person-rays' },
+  { key:'st_kebeles',     icon:'fa-map-location-dot' },
+  { key:'st_activities',  icon:'fa-people-group' },
+  { key:'st_trees',       icon:'fa-tree' },
+  { key:'st_youth',       icon:'fa-person-hiking' },
+  { key:'st_women',       icon:'fa-person-dress' }
+];
+
+/* --- Activity cards (chips use ACT_CATS — independent from gallery categories) --- */
+const ACT_CATS = { environment:{am:'የአካባቢ ጥበቃ',en:'Environment'}, community:{am:'የማኅበረሰብ',en:'Community'}, youth:{am:'ወጣቶች',en:'Youth'}, women:{am:'የሴቶች',en:'Women'} };
+const ACTIVITIES = [
+  { cat:'environment', photo:'bbb11.jpg',   titleAm:'የአካባቢ ጥበቃ', titleEn:'Environment' },
+  { cat:'community',   photo:'bbb1111.jpg', titleAm:'የማኅበረሰብ ተሳትፎ', titleEn:'Community' },
+  { cat:'youth',       photo:'news11.jpg',  titleAm:'የወጣቶች ተግባራት', titleEn:'Youth Work' },
+  { cat:'women',       photo:'news1111.jpg',titleAm:'የሴቶች ተሳትፎ', titleEn:"Women's Participation" }
+];
+
+/* --- Gallery (.update Part 1 — 3 categories: Community=4 bbb photos, Youth=intentionally empty,
+   Meetings=4 news photos. Verified filenames on disk. No duplicates, no invented photos.) --- */
+const GAL_CATS = { community:{am:'ማህበራዊ',en:'Community'}, youth:{am:'ወጣቶች',en:'Youth'}, meetings:{am:'ሰብሰባ',en:'Meetings'} };
+const GALLERY = [
+  { cat:'community', photo:'bbb1.jpg' },
+  { cat:'community', photo:'bbb11.jpg' },
+  { cat:'community', photo:'bbb111.jpg' },
+  { cat:'community', photo:'bbb1111.jpg' },
+  { cat:'meetings',  photo:'news1.jpg' },
+  { cat:'meetings',  photo:'news11.jpg' },
+  { cat:'meetings',  photo:'news111.jpg' },
+  { cat:'meetings',  photo:'news1111.jpg' }
+];
+/* --- Digital Library (.update Part 4 — verified external resources ONLY) ---
+   Every url below was opened and its content confirmed during this update pass.
+   kind: 'text' → Read Online · 'article'/'site' → Open Source */
+const LIBRARY_CATS = {
+  prosperity:{ am:'ብልጽግና', en:'Prosperity' },
+  medemer:{ am:'መደመር', en:'Medemer' },
+  dev:    { am:'የኢትዮጵያ ልማት', en:'Ethiopia Development' },
+  policy: { am:'ፖሊሲ / ሰነዶች', en:'Policy / Documents' },
+  econ:   { am:'ኢኮኖሚ', en:'Economy' },
+  youth:  { am:'ወጣቶች', en:'Youth' }
+};
+const LIBRARY_RESOURCES = [
+  { titleAm:'ሕገ-መንግሥት የኢትዮጵያ ፌዴራላዊ ዴሞክራሲያዊ ሪፐብሊክ', titleEn:'Constitution of the Federal Democratic Republic of Ethiopia',
+    org:'Federal Democratic Republic of Ethiopia', cat:'policy', year:1995, kind:'text',
+    descAm:'የኢትዮጵያ ፌዴራላዊ ዴሞክራሲያዊ ሪፐብሊክ ሕገ-መንግሥት ሙሉ ጽሑፍ በኢንግሊዝኛ — በክፍት ዊኪሶርስ ቤተ-መጻሕፍት ላይ ይገኛል።',
+    descEn:'Full English text of the Constitution of the Federal Democratic Republic of Ethiopia (adopted 21 August 1995), hosted on the open Wikisource library.',
+    url:'https://en.wikisource.org/wiki/Constitution_of_Ethiopia', sourceName:'Wikisource (Wikimedia)' },
+
+  { titleAm:'መደመር — የመጽሐፉ የመረጃ ማጣቀሻ', titleEn:'Medemer — background information on the book',
+    org:'By Abiy Ahmed · Tsehai Publishers, 2019', cat:'medemer', year:2019, kind:'article',
+    descAm:'“መደመር” በአቶ ዶክተር ዐቢይ አህመድ የተደረሰ (ጥቅምት 2019 ዓ.ም.) — ይህ የመጽሐፉ ጽሑፍ ሳይሆን ስለ እሱ የተዘጋጀ ማጣቀሻ ጽሑፍ ነው።',
+    descEn:'Reference article about “Medemer” (Amharic: መደመር), the book by Abiy Ahmed published 19 October 2019 by Tsehai Publishers. This is background information about the book, not the book text itself.',
+    url:'https://en.wikipedia.org/wiki/Medemer', sourceName:'Wikipedia' },
+
+  { titleAm:'አጀንዳ 2063 — “የምንያመነው አፍሪካ”', titleEn:'Agenda 2063 — “The Africa We Want”',
+    org:'African Union (AU)', cat:'dev', year:2015, kind:'site',
+    descAm:'የአፍሪካ ህብረት የ50 ዓመት የልማት ዕቅድና ራዕይ ማጠቃለያ — ለኢትዮጵያ ልማት የሚያገለግል አህጉራዊ ዳራ ነው።',
+    descEn:'Overview of the African Union’s 50-year development blueprint, Agenda 2063, including its first Ten-Year Implementation Plan.',
+    url:'https://au.int/en/agenda2063/overview', sourceName:'African Union — au.int' },
+
+  { titleAm:'የኢትዮጵያ ብሔራዊ ባንክ — ይፋዊ ድህረ-ገፅ', titleEn:'National Bank of Ethiopia — official website',
+    org:'National Bank of Ethiopia', cat:'econ', kind:'site',
+    descAm:'የሀገሪቱ ማዕከላዊ ባንክ ይፋዊ ገፅ — የፋይናንስ ፖሊሲ፣ ሕጎችና መመሪያዎች፣ ህትመቶችና ስታቲስቲክስ።',
+    descEn:'The central bank’s official website — monetary policy, laws, directives, publications and statistics.',
+    url:'https://nbe.gov.et', sourceName:'National Bank of Ethiopia' },
+
+  { titleAm:'የኢትዮጵያ ኢንቨስትመንት ኮሚሽን — ይፋዊ ድህረ-ገፅ', titleEn:'Ethiopian Investment Commission — official website',
+    org:'Ethiopian Investment Commission (EIC)', cat:'econ', kind:'site',
+    descAm:'የኢንቨስትመንት ሕጎች፣ መመሪያዎችና ዘርፎች መረጃ — የኢኮኖሚ ልማት ለሚፈልጉ ይጠቅማል።',
+    descEn:'Investment laws, guides and sector information from Ethiopia’s official investment authority.',
+    url:'https://investethiopia.gov.et', sourceName:'Ethiopian Investment Commission' },
+
+  { titleAm:'የኢትዮጵያ የልማት መርሃ-ግብር — የተባበሩት መንግስታት (UNDP)', titleEn:'UNDP Ethiopia — country programme and publications',
+    org:'United Nations Development Programme', cat:'dev', kind:'site',
+    descAm:'የ UNDP የኢትዮጵያ ገፅ — የአገሪቱ ተመራመር ሰነዶች (2025–2030) ጨምሮ የልማት ህትመቶችን ያዘጋጃል።',
+    descEn:'UNDP Ethiopia’s country page hosting its Country Programme Document (2025–2030) and development publications.',
+    url:'https://www.undp.org/ethiopia', sourceName:'United Nations Development Programme' },
+
+  { titleAm:'የኢትዮጵያ ሕዝብ ተወካዮች ምክር ቤት — ይፋዊ ገፅ', titleEn:'House of Peoples’ Representatives of the FDRE — official site',
+    org:'House of Peoples’ Representatives, FDRE', cat:'policy', kind:'site',
+    descAm:'የሕዝብ ተወካዮች ምክር ቤት ይፋዊ ገፅ — የሕግ አውጭ አካል መረጃና ማስታወቂያዎች።',
+    descEn:'Official website of Ethiopia’s House of Peoples’ Representatives, the lower house of the Federal Parliamentary Assembly.',
+    url:'https://www.hopr.gov.et', sourceName:'House of Peoples’ Representatives of the FDRE' },
+
+  { titleAm:'የፌዴራላዊ ዴሞክራሲያዊ ሪፐብሊክ የጠቅላላ ሚኒስትር ጽ/ቤት — ይፋዊ ድረ-ገፅ', titleEn:'FDRE Office of the Prime Minister — official website',
+    org:'Office of the Prime Minister, FDRE', cat:'prosperity', kind:'site',
+    descAm:'የፌዴራላዊ ዴሞክራሲያዊ ሪፐብሊክ የጠቅላላ ሚኒስትር ጽ/ቤት ይፋዊ ድረ-ገፅ — የመንግሥት ፖሊሲዎችና የብልጽግና አጀንዳ መረጃ።',
+    descEn:'Official website of the FDRE Office of the Prime Minister — government policies and the prosperity agenda.',
+    url:'https://pmo.gov.et', sourceName:'FDRE Office of the Prime Minister' },
+
+  { titleAm:'የአፍሪካ ወጣቶች ቻርተር', titleEn:'African Youth Charter',
+    org:'African Union (AU)', cat:'youth', kind:'text',
+    descAm:'የአፍሪካ ህብረት ስለ ወጣቶች መብቶችና ልማት ያደረገው አቀፍ ማዕቀፍ — የወጣቶች ተሳትፎና ልማት መርሆች።',
+    descEn:'The African Union continental framework on youth rights, participation and development.',
+    url:'https://au.int/en/treaties/african-youth-charter', sourceName:'African Union — au.int' }
+];
+/* --- Vocabulary: i18n dictionaries --- */
+const I18N = {
+am: {
+  page_title: 'የወልቂጤ ከተማ ብልጽግና ፓርቲ | ይፋዊ ድህረ-ገፅ',
+  brand_short: 'የወልቂጤ ከተማ ብልጽግና ፓርቲ', brand_sub: 'Wolkite City Prosperity Party', brand_full: 'የወልቂጤ ከተማ ብልጽግና ፓርቲ', brand_sub2: 'Wolkite City Prosperity Party',
+  top_addr: 'ወልቂጤ ከተማ፣ ኢትዮጵያ',
+  nav_home:'ዋና ገፅ', nav_about:'ስለ እኛ', nav_leadership:'አመራር', nav_activities:'እንቅስቃሴዎች', nav_news:'ዜና', nav_contact:'ያግኙን',
+  nav_values:'እሴቶች', nav_objectives:'ዓላማዎች', nav_impact:'ተፅእኖ', nav_gallery:'ማዕከለ ስዕላት',
+  hero_badge:'የወልቂጤ ከተማ ብልጽግና ፓርቲ', hero_title:'የወልቂጤ ከተማ ብልጽግና ፓርቲ',
+  hero_sub:'የወልቂጤ ከተማ ብልጽግና ፓርቲ ቅርንጫፍ — በመደመር የአህበረሰብ ተሳትፎ፣ የአካባቢ ጥበቃና የልማት ተግባራት።',
+  hero_cta1:'የፓርቲውን ይወቁ', hero_cta2:'አዳዲስ መረጃዎች',
+  about_eyebrow:'ስለ እኛ', about_title:'ስለ ፓርቲው',
+  about_body:'የወልቂጤ ከተማ ብልጽግና ፓርቲ ቅርንጫፍ በጉራጌ ዞን የአስተዳደር ማዕከል በሆነችው በወልቂጤ ከተማ የሚሰራ የብልጽግና ፓርቲ ቅርንጫፍ ነው። በከተማዋ ክፍለ ከተሞችና በቀበሌዎች ተደራጅቶ በአካባቢ ጥበቃ፣ በማኅበረሰብ ተሳትፎና በልማት ተግባራት ላይ ይሰራል።',
+  about_areas1_t:'ተግባራት', about_areas1:'የአካባቢ ጥበቃ፣ ዛፍ ተክልና የአረንጋዴ እንክብካቤ',
+  about_areas2_t:'ተሳትፎ', about_areas2:'የሰፈር ኮሚቴዎችና የአህበረሰብ ውይይት መድረኮች',
+  about_official:'የወልቂጤ ከተማ ብልጽግና ፓርቲ ይፋዊ ድረ-ገፅ።',
+  vision_head:'ራዕይ', mission_head:'ተልዕኮ',
+  focus_title:'የትኩረት መስኮች', focus_sub:'በድረ-ገፁ ላይ የሚታዩ ጭብጦች — እንደ የትኩረት መስኮች ተደራጅተዋል።',
+  v2018:'ከተስፋ ወደ ሚጨበጥ ብረሀን', v2018_d:'የወጣቶች ተሳትፎ የተጠናከረበት ብሩህ የከተማ ራዕይ።',
+  v2023:'የአፍሪካ ብልፅግና ተምሳሌት', v2023_d:'በመደመር ወደ የአፍሪካ የብልጽግና አርአያነት ማደግ።',
+  v2040:'አለም አቀፍ የብልፅግና አርአያ', v2040_d:'የትውልድ ተሳትፎ በማዕከልነት ወደ አለም አቀፍ ደረጃ ማድረግ።',
+  mission_t:'ተልዕኮ / አጠቃላይ አላማ', mission_q:'“የበለጸገች ኢትዮጵያን እውን ማድረግ”',
+  obj_title:'ዓላማዎች',
+  values_title:'የእሴቶች', values_sub:'የእንቅስቃሴያችን የሚመሩ መሠረታዊ እሴቶች',
+  impact_title:'የማኅበረሰብ ተፅእኖ', impact_note:'አሃዞች ሲረጋገጡ ይለቀቃሉ — ለአሁኑ ገለልተኛ ቦታ ያዢ።',
+  st_members:'አባላት', st_kebeles:'ቀበሌዎች/ቅርንጫፎች', st_activities:'የማኅበረሰብ ተግባራት', st_trees:'የተተከሉ ዛፎች', st_youth:'የወጣቶች ተሳታፊዎች', st_women:'የሴቶች ተሳታፊዎች',
+  lead_eyebrow:'አመራር', lead_title:'የፓርቲው አመራሮች', lead_sub:'የወልቂጤ ከተማ ብልጽግና ፓርቲ ቅርንጫፍ አመራር ቡድን', lead_hint:'ዝርዝር መገለጫ ለማየት ካርዱን ይንኩ',
+  modal_close:'ዝጋ',
+  act_title:'የእንቅስቃሴዎች', act_sub:'የአካባቢ ጥበቃ፣ የማኅበረሰብ ተሳትፎ እና የወጣቶች ተግባራት',
+  act_photo_later:'ፎቶ ገና አልተቀረበም።',
+  library_title:'ዲጂታል ቤተ-መጻሕፍት',
+  library_sub:'ስለ ብልጽግና፣ መደመር፣ የኢትዮጵያ ልማትና ኢኮኖሚ የሚጠቅሙ የተረጋገጡ ውጫዊ ምንጮች — ብዛቱ ይስፋፋል።',
+  library_note:'ሁሉም ማስፈንጠሪያዎች ውጫዊ ናቸው፤ በአዲስ ትር ይከፈታሉ።',
+  library_search_ph:'ፈልግ...',
+  library_filter_all:'ሁሉም',
+  library_source:'ምንጭ',
+  library_read:'በመስመር ላይ ያንብቡ',
+  library_open:'ምንጩን ይክፈቱ',
+  library_empty:'የሚፈልጉት ውጤት አልተገኘም።',
+  gal_title:'ማዕከለ ስዕላት', gal_sub:'የእንቅስቃሴ ፎቶዎች', gal_filter_all:'ሁሉም', gal_empty:'የወጣቶች ምስሎች በቅርቡ ይጨመራሉ።',
+  news_eyebrow:'ዜና', news_title:'አዳዲስ መረጃዎች', news_sub:'የወልቂጤ ከተማ ወጣቶች ክንፍ Facebook ገጽ ላይ የተለቀቁ የቅርብ ጊዜ ዜናዎች — እንደ ድረ-ገፅ ዜና ቀርበዋል።',
+  nav_media:'ሚዲያ',
+  media_eyebrow:'ሚዲያ', media_title:'ሚዲያ', media_sub:'ይፋዊ ማህበራዊ ሚዲያ ገጾች — ኦፊሴላዊ አድራሻዎች ሲረጋገጡ ይጨመራሉ።',
+  media_note:'የመድረክ አድራሻዎች እስከሚረጋገጡ ድረስ አይነቃነቁም።',
+  contact_eyebrow:'ግንኙነት', contact_title:'ያግኙን', contact_sub:'ሀሳብ፣ ጥያቄ ካለዎት እባክዎን ይጽፉልን',
+  ct_office_t:'አድራሻ', ct_addr:'ወልቂጤ ከተማ፣ ኢትዮጵያ', ct_email_t:'ኢሜይል', ct_email_ph:'[ኢሜይል ሲያገኝ ይረሳል]',
+  ct_tg_t:'ቴሌግራም', ct_tg_ph:'[ያስገባል]',
+  form_title:'መልዕክት ይላኩ', form_note:'መልዕክት የሚላከው ይፋዊ አድራሻ ሲዘጋጅ ነው።',
+  form_name_l:'ሙሉ ስም', form_email_l:'ኢ-ሜይል', form_msg_l:'መልዕክት',
+  form_name_ph:'ሙሉ ስም', form_email_ph:'ኢ-ሜይል', form_msg_ph:'መልዕክትዎ...',
+  send_msg:'መልዕክት ይላኩ', form_disabled:'የመላኪያ አገልግሎት እስኪዘጋጅ ድረስ ቦታ ያዢ ነው።',
+  foot_mains:'ዋና ክፍሎች', foot_subs:'ክፍል አገናኞች', foot_vm:'ራዕይ / ተልዕኮ',
+  foot_desc:'የወልቂጤ ከተማ ብልጽግና ፓርቲ ይፋዊ ድህረ-ገፅ።',
+  foot_contact:'ያግኙን', foot_rights:'መብቱ በህግ የተጠበቀ'
+},
+en: {
+  page_title: 'Wolkite City Prosperity Party | Official Website',
+  brand_short: 'Wolkite City Prosperity Party', brand_sub: 'Wolkite City Prosperity Party', brand_full: 'Wolkite City Prosperity Party', brand_sub2: 'Wolkite City Prosperity Party',
+  top_addr: 'Wolkite City, Ethiopia',
+  nav_home:'Home', nav_about:'About', nav_leadership:'Leadership', nav_activities:'Activities', nav_news:'News', nav_contact:'Contact',
+  nav_values:'Values', nav_objectives:'Objectives', nav_impact:'Impact', nav_gallery:'Gallery',
+  hero_badge:'Wolkite City Prosperity Party', hero_title:'Wolkite City Prosperity Party',
+  hero_sub:'The Wolkite City Prosperity Party branch — community participation, environmental care and development through Medemer.',
+  hero_cta1:'Explore Our Party', hero_cta2:'Latest Updates',
+  about_eyebrow:'About Us', about_title:'About the Party',
+  about_body:'The Wolkite City Prosperity Party branch operates in Wolkite City, the administrative capital of the Gurage Zone. Organized across the city\u2019s kebeles, it works on environmental protection, community participation and development activities.',
+  about_areas1_t:'Activities', about_areas1:'Environmental care, tree planting and green-area maintenance',
+  about_areas2_t:'Participation', about_areas2:'Neighbourhood committees and community dialogue forums',
+  about_official:'Official website of the Wolkite City Prosperity Party.',
+  vision_head:'Vision', mission_head:'Mission',
+  focus_title:'Areas of Focus', focus_sub:'Themes reflected across this website, organized as areas of focus.',
+  v2018:'From hope to shining light', v2018_d:'A bright city vision with strengthened participation.',
+  v2023:'Model of African prosperity', v2023_d:'Growing through Medemer toward an African prosperity model.',
+  v2040:'Global model of prosperity', v2040_d:'Leading to a global standard through participation and progress.',
+  mission_t:'Mission / Overall purpose', mission_q:'\u201CTo realise a prosperous Ethiopia\u201D',
+  obj_title:'Objectives',
+  values_title:'Our Values', values_sub:'Core values that guide our work',
+  impact_title:'Community Impact', impact_note:'Figures will be published once verified — neutral placeholders for now.',
+  st_members:'Members', st_kebeles:'Kebele / Branches', st_activities:'Community Activities', st_trees:'Trees Planted', st_youth:'Youth Participants', st_women:'Women Participants',
+  lead_eyebrow:'Leadership', lead_title:'Party Leadership', lead_sub:'Leadership team of the Wolkite City Prosperity Party branch', lead_hint:'Tap a card to view details',
+  modal_close:'Close',
+  act_title:'Our Activities', act_sub:'Environmental care, community participation and youth work',
+  act_photo_later:'Photo not provided yet.',
+  library_title:'Digital Library',
+  library_sub:'Verified external resources on Prosperity, Medemer, Ethiopia development and the economy — the collection will grow.',
+  library_note:'All links are external and open in a new tab.',
+  library_search_ph:'Search the library...',
+  library_filter_all:'All',
+  library_source:'Source',
+  library_read:'Read Online',
+  library_open:'Open Source',
+  library_empty:'No resources match your search.',
+  gal_title:'Gallery', gal_sub:'Activity photos', gal_filter_all:'All', gal_empty:'Youth photos will be added soon.',
+  news_eyebrow:'News', news_title:'Latest Updates', news_sub:'Recent posts published on the Wolkite City Youth Wing Facebook page — presented as native website news.',
+  nav_media:'Media',
+  media_eyebrow:'Media', media_title:'Media', media_sub:'Official social-media channels — more will be added as official addresses are confirmed.',
+  media_note:'Platform links stay inactive until official addresses are verified.',
+  contact_eyebrow:'Contact', contact_title:'Contact Us', contact_sub:'Share your ideas and questions',
+  ct_office_t:'Address', ct_addr:'Wolkite City, Ethiopia', ct_email_t:'Email', ct_email_ph:'[Email will appear here once available]',
+  ct_tg_t:'Telegram', ct_tg_ph:'[To be added]',
+  form_title:'Send a Message', form_note:'Messages can be sent once an official channel is set up.',
+  form_name_l:'Full name', form_email_l:'Email', form_msg_l:'Message',
+  form_name_ph:'Full name', form_email_ph:'Email', form_msg_ph:'Your message...',
+  send_msg:'Send Message', form_disabled:'Placeholder until a delivery service is configured.',
+  foot_mains:'Main Sections', foot_subs:'Section Links', foot_vm:'Vision / Mission',
+  foot_desc:'Official website of the Wolkite City Prosperity Party.',
+  foot_contact:'Contact Us', foot_rights:'All rights reserved'
+}
+}; /* end I18N */
+const T = (k) => (I18N[LANG] && I18N[LANG][k]) || I18N.en[k] || k;
+const isAm = () => LANG === 'am';
+
+/* ================================================================
+   RENDERERS
+   ================================================================ */
+/* --- Media (.update — official social channels; only verified URLs active) --- */
+const MEDIA_PLATFORMS = [
+  { name:'Facebook',  icon:'fa-brands fa-facebook-f',
+    descAm:'የዜናዎች ምንጭ — የወልቂጤ ከተማ ወጣቶች ክንፍ Facebook ገጽ።',
+    descEn:'News source — the Wolkite City Youth Wing Facebook page.',
+    url:'https://www.facebook.com/profile.php?id=61577407634585', active:true },
+  { name:'YouTube',   icon:'fa-brands fa-youtube',
+    descAm:'ይፋዊ አድራሻ ሲዘጋጅ ይታያል።',
+    descEn:'Will appear once the official address is prepared.', url:'', active:false },
+  { name:'TikTok',    icon:'fa-brands fa-tiktok',
+    descAm:'ይፋዊ አድራሻ ሲዘጋጅ ይታያል።',
+    descEn:'Will appear once the official address is prepared.', url:'', active:false },
+  { name:'Telegram',  icon:'fa-brands fa-telegram',
+    descAm:'ይፋዊ አድራሻ ሲዘጋጅ ይታያል።',
+    descEn:'Will appear once the official address is prepared.', url:'', active:false }
+];
+function renderMedia(){
+  const am = isAm();
+  $('#mediaGrid').innerHTML = MEDIA_PLATFORMS.map((m,i) =>
+    '<div class="media-card reveal reveal-' + (i % 3) + '">' +
+      '<span class="media-ic"><i class="' + m.icon + '"></i></span>' +
+      '<h3>' + escHtml(m.name) + '</h3>' +
+      '<p>' + escHtml(am ? m.descAm : m.descEn) + '</p>' +
+      (m.active && m.url
+        ? '<a class="media-btn" href="' + escHtml(m.url) + '" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i>' + escHtml(am ? 'ይጎብኙ' : 'Visit') + '</a>'
+        : '<span class="media-btn" aria-disabled="true"><i class="fa-regular fa-clock"></i>' + escHtml(am ? 'በቅርቡ' : 'Coming soon') + '</span>') +
+    '</div>').join('');
+  observeReveals();
+}
+function renderObjectives(){
+  $('#objectivesGrid').innerHTML = OBJECTIVES.map((o,i) =>
+    '<div class="obj-card reveal reveal-' + (i % 3) + '">' +
+      '<span class="num">' + (i+1) + '</span>' +
+      '<p>' + escHtml(isAm() ? o.am : o.en) + '</p>' +
+    '</div>').join('');
+  observeReveals();
+}
+function renderValues(){
+  $('#valuesGrid').innerHTML = VALUES.map((v,i) =>
+    '<div class="value-card reveal reveal-' + (i % 3) + '">' +
+      '<i class="fa-solid ' + v.icon + '"></i>' +
+      '<h3>' + escHtml(isAm() ? v.am : v.en) + '</h3>' +
+      '<p>' + escHtml(isAm() ? v.amD : v.enD) + '</p>' +
+    '</div>').join('');
+  observeReveals();
+}
+function renderFocus(){
+  const am = isAm();
+  $('#focusGrid').innerHTML = FOCUS_AREAS.map((f,i) =>
+    '<div class="focus-card reveal reveal-' + (i % 3) + '">' +
+      '<i class="fa-solid ' + f.icon + '"></i>' +
+      '<h4>' + escHtml(am ? f.am : f.en) + '</h4>' +
+    '</div>').join('');
+  observeReveals();
+}
+function renderStats(){
+  $('#statsGrid').innerHTML = STATS.map((s,i) =>
+    '<div class="stat-card reveal reveal-' + (i % 3) + '">' +
+      '<i class="fa-solid ' + s.icon + ' text-gold text-lg"></i>' +
+      '<div class="stat-num">—</div>' +
+      '<h4>' + escHtml(T(s.key)) + '</h4>' +
+    '</div>').join('');
+  observeReveals();
+}
+function renderActivities(){
+  $('#actGrid').innerHTML = ACTIVITIES.map((a,i) =>
+    '<article class="act-card reveal reveal-' + (i % 3) + '">' +
+      (a.photo
+        ? '<img src="' + imgUri(a.photo) + '" alt="' + escHtml(isAm() ? a.titleAm : a.titleEn) + '" loading="lazy">'
+        : '<div class="act-fallback"><i class="fa-solid fa-images"></i><span>' + escHtml(T('act_photo_later')) + '</span></div>') +
+      '<div class="act-card-body">' +
+        '<span class="chip">' + escHtml(isAm() ? ACT_CATS[a.cat].am : ACT_CATS[a.cat].en) + '</span>' +
+        '<h3 class="mt-2">' + escHtml(isAm() ? a.titleAm : a.titleEn) + '</h3>' +
+      '</div>' +
+    '</article>').join('');
+  observeReveals();
+}
+function renderLeaders(){
+  const am = isAm();
+  $('#leaderGrid').innerHTML = LEADERS.map((L,i) =>
+    '<article class="leader-card reveal reveal-' + (i % 3) + '" data-leader="' + i + '" role="button" tabindex="0" aria-label="' + escHtml(am ? L.nameAm : L.nameEn) + '">' +
+      '<span class="leader-view">' + escHtml(T('lead_hint')) + '</span>' +
+      '<div class="leader-photo"><img src="' + imgUri(L.photo) + '" alt="' + escHtml(am ? L.nameAm : L.nameEn) + '" loading="lazy"></div>' +
+      '<div class="leader-meta">' +
+        '<p class="leader-role">' + escHtml(am ? L.titleAm : L.titleEn) + '</p>' +
+        '<h3 class="leader-name">' + escHtml(am ? L.nameAm : L.nameEn) + '</h3>' +
+      '</div>' +
+    '</article>').join('');
+  $$('#leaderGrid [data-leader]').forEach(el => {
+    el.addEventListener('click', () => openLeader(+el.dataset.leader));
+    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLeader(+el.dataset.leader); } });
+  });
+  observeReveals();
+}
+function openLeader(i){
+  const am = isAm(); const L = LEADERS[i]; if (!L) return;
+  $('#leaderSheet').innerHTML =
+    '<div class="grid md:grid-cols-[2fr,3fr]">' +
+      '<div class="relative min-h-[280px] md:min-h-[380px]" style="background:linear-gradient(135deg,var(--brand-dark),#0A4256)">' +
+        '<img src="' + imgUri(L.photo) + '" alt="' + escHtml(am ? L.nameAm : L.nameEn) + '" class="absolute inset-0 w-full h-full object-cover">' +
+      '</div>' +
+      '<div class="p-7 sm:p-9">' +
+        '<span class="chip">' + escHtml(am ? 'አመራር' : 'Leadership') + '</span>' +
+        '<h3 class="mt-3 font-extrabold leading-snug" style="color:var(--brand-dark);font-size:1.3rem">' + escHtml(am ? L.nameAm : L.nameEn) + '</h3>' +
+        '<p class="mt-1.5 font-bold text-[.88rem] leading-relaxed" style="color:var(--brand-dark)">' + escHtml(am ? L.titleAm : L.titleEn) + '</p>' +
+        '<button class="btn btn-gold mt-7" id="leaderSheetClose"><i class="fa-solid fa-xmark"></i>' + escHtml(T('modal_close')) + '</button>' +
+      '</div>' +
+    '</div>';
+  $('#leaderSheetClose').addEventListener('click', closeLeader);
+  $('#leaderModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLeader(){ $('#leaderModal').classList.remove('open'); document.body.style.overflow = ''; }
+$('#leaderModalClose').addEventListener('click', closeLeader);
+$('#leaderModal').addEventListener('click', e => { if (e.target.id === 'leaderModal') closeLeader(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('#leaderModal').classList.contains('open')) closeLeader(); });
+
+/* --- Gallery (7 real photos) --- */
+let galFilter = 'all', lbIdx = 0, lbList = [];
+function renderGalleryFilters(){
+  const am = isAm();
+  const cats = ['all'].concat(Object.keys(GAL_CATS));
+  $('#galFilters').innerHTML = cats.map(c =>
+    '<button class="gal-filter chip ' + (c === galFilter ? '!bg-brand !text-[#17324D] !border-brand' : '') + '" data-cat="' + c + '">' +
+      escHtml(c === 'all' ? T('gal_filter_all') : (am ? GAL_CATS[c].am : GAL_CATS[c].en)) +
+    '</button>').join('');
+  $$('#galFilters [data-cat]').forEach(b => b.addEventListener('click', () => { galFilter = b.dataset.cat; renderGalleryFilters(); renderGallery(); }));
+}
+function renderGallery(){
+  const am = isAm();
+  lbList = GALLERY.filter(g => galFilter === 'all' || g.cat === galFilter);
+  if (!lbList.length) {
+    $('#galleryGrid').innerHTML =
+      '<div class="gal-empty" role="status">' +
+        '<i class="fa-regular fa-images"></i>' +
+        '<p>' + escHtml(T('gal_empty')) + '</p>' +
+      '</div>';
+    return;
+  }
+  $('#galleryGrid').innerHTML = lbList.map((g,i) =>
+    '<figure class="gal-item" data-lb="' + i + '">' +
+      '<img src="' + imgUri(g.photo) + '" alt="' + escHtml(am ? GAL_CATS[g.cat].am : GAL_CATS[g.cat].en) + '" loading="lazy">' +
+      '<figcaption class="gal-cap">' + escHtml(am ? GAL_CATS[g.cat].am : GAL_CATS[g.cat].en) + '</figcaption>' +
+    '</figure>').join('');
+  $$('#galleryGrid [data-lb]').forEach(el => el.addEventListener('click', () => openLb(+el.dataset.lb)));
+}
+function openLb(i){
+  lbIdx = i;
+  const g = lbList[i]; if (!g) return;
+  $('#lightboxImg').src = imgUri(g.photo);
+  $('#lightboxImg').alt = isAm() ? GAL_CATS[g.cat].am : GAL_CATS[g.cat].en;
+  $('#lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLb(){ $('#lightbox').classList.remove('open'); document.body.style.overflow = ''; }
+function lbStep(d){ openLb((lbIdx + d + lbList.length) % lbList.length); }
+$('#lbClose').addEventListener('click', closeLb);
+$('#lbPrev').addEventListener('click', () => lbStep(-1));
+$('#lbNext').addEventListener('click', () => lbStep(1));
+$('#lightbox').addEventListener('click', e => { if (e.target.id === 'lightbox') closeLb(); });
+/* Lightbox keyboard support */
+document.addEventListener('keydown', e => {
+  if (!$('#lightbox').classList.contains('open')) return;
+  if (e.key === 'Escape') closeLb();
+  if (e.key === 'ArrowLeft') lbStep(-1);
+  if (e.key === 'ArrowRight') lbStep(1);
+});
+
+/* ================================================================
+   DIGITAL LIBRARY — filters, search and card grid (data-driven)
+   ================================================================ */
+let libFilter = 'all';
+function renderLibraryFilters(){
+  const am = isAm();
+  const cats = ['all'].concat(Object.keys(LIBRARY_CATS));
+  $('#libFilters').innerHTML = cats.map(c =>
+    '<button class="lib-filter' + (c === libFilter ? ' active' : '') + '" data-libcat="' + c + '" type="button">' +
+      escHtml(c === 'all' ? T('library_filter_all') : (am ? LIBRARY_CATS[c].am : LIBRARY_CATS[c].en)) +
+    '</button>').join('');
+  $$('#libFilters [data-libcat]').forEach(b => b.addEventListener('click', () => { libFilter = b.dataset.libcat; renderLibraryFilters(); renderLibrary(); }));
+}
+function renderLibrary(){
+  const am = isAm();
+  const q = ($('#libSearch') ? $('#libSearch').value : '').trim().toLowerCase();
+  const list = LIBRARY_RESOURCES.filter(r =>
+    (libFilter === 'all' || r.cat === libFilter) &&
+    (!q ||
+      (am ? r.titleAm + ' ' + r.descAm : r.titleEn + ' ' + r.descEn).toLowerCase().includes(q) ||
+      r.org.toLowerCase().includes(q) ||
+      r.sourceName.toLowerCase().includes(q)));
+  if (!list.length) {
+    $('#libGrid').innerHTML = '<div class="col-span-full text-center py-12 text-sm" style="color:var(--muted)"><i class="fa-solid fa-book-open text-2xl block mx-auto my-2"></i>' + escHtml(T('library_empty')) + '</div>';
+    return;
+  }
+  $('#libGrid').innerHTML = list.map(r => {
+    const title = am ? r.titleAm : r.titleEn;
+    const desc  = am ? r.descAm : r.descEn;
+    const cat   = LIBRARY_CATS[r.cat] ? (am ? LIBRARY_CATS[r.cat].am : LIBRARY_CATS[r.cat].en) : r.cat;
+    const mono  = title.length > 26 ? title.slice(0, 25) + '…' : title;
+    return '<article class="lib-card reveal reveal-' + (Math.abs(r.year || 0) % 3) + '">' +
+      '<div class="lib-cover">' +
+        '<span class="lib-mono">' + escHtml(mono) + '</span>' +
+        '<span class="lib-ortag">' + escHtml(r.kind === 'text' ? 'TEXT' : (r.kind === 'article' ? 'INFO' : 'WEB')) + '</span>' +
+        '<span class="lib-orgtag">' + escHtml(r.org + (r.year ? ' · ' + r.year : '')) + '</span>' +
+      '</div>' +
+      '<div class="lib-body">' +
+        '<span class="chip">' + escHtml(cat) + '</span>' +
+        '<h3 class="mt-2">' + escHtml(title) + '</h3>' +
+        '<p class="lib-src"><i class="fa-solid fa-circle-check"></i>' + escHtml(T('library_source') + ': ' + r.sourceName) + '</p>' +
+        '<p class="lib-desc">' + escHtml(desc) + '</p>' +
+        '<div class="lib-btns">' +
+          '<a class="lib-btn gold" href="' + escHtml(r.url) + '" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i>' + escHtml(r.kind === 'text' ? T('library_read') : T('library_open')) + '</a>' +
+        '</div>' +
+      '</div>' +
+    '</article>';
+  }).join('');
+  observeReveals();
+}
+const libSearchEl = $('#libSearch');
+if (libSearchEl) libSearchEl.addEventListener('input', renderLibrary);
+
+/* ================================================================
+   i18n ENGINE + UI BEHAVIOUR
+   ================================================================ */
+function applyLang(){
+  document.body.classList.toggle('lang-am', isAm());
+  document.documentElement.lang = isAm() ? 'am' : 'en';
+  document.title = T('page_title');
+  $$('[data-i18n]').forEach(el => { el.textContent = T(el.dataset.i18n); });
+  $$('[data-i18n-ph]').forEach(el => { el.placeholder = T(el.dataset.i18nPh); });
+  $('#langAm').classList.toggle('on', isAm());
+  $('#langEn').classList.toggle('on', !isAm());
+  renderObjectives(); renderValues(); renderFocus(); renderStats(); renderActivities();
+  renderLeaders(); renderGalleryFilters(); renderGallery(); renderLibraryFilters(); renderLibrary(); renderMedia();
+  if (HAS_NEWS) {
+    if (NEWS_LIVE && FACEBOOK_NEWS.rerender) FACEBOOK_NEWS.rerender();
+    else renderNewsNote();
+  }
+  localStorage.setItem('wk_lang', LANG);
+}
+$('#langToggle').addEventListener('click', () => { LANG = isAm() ? 'en' : 'am'; applyLang(); });
+
+/* Theme */
+function setTheme(t){
+  if (t === 'dark') document.documentElement.setAttribute('data-theme','dark');
+  else document.documentElement.removeAttribute('data-theme');
+  localStorage.setItem('wk_theme', t);
+  const ic = $('#themeIcon');
+  if (ic) { ic.classList.remove('fa-moon','fa-sun'); ic.classList.add(t === 'dark' ? 'fa-sun' : 'fa-moon'); }
+}
+$('#themeToggle').addEventListener('click', () =>
+  setTheme(document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
+
+/* Hero carousel */
+let carIdx = 0, carTimer;
+function carGo(i){
+  const n = Math.max($$('.car-slide').length, 1);
+  carIdx = ((i % n) + n) % n;
+  $$('.car-slide').forEach((s,k) => s.classList.toggle('active', k === carIdx));
+  $$('#heroDots .hero-dot').forEach((d,k) => d.classList.toggle('active', k === carIdx));
+}
+function carStart(){ clearInterval(carTimer); carTimer = setInterval(() => carGo(carIdx + 1), 6500); }
+$('#heroNext').addEventListener('click', () => { carGo(carIdx + 1); carStart(); });
+$('#heroPrev').addEventListener('click', () => { carGo(carIdx - 1); carStart(); });
+$$('#heroDots .hero-dot').forEach(d => d.addEventListener('click', () => { carGo(+d.dataset.slide); carStart(); }));
+
+/* Sticky nav */
+const navEl = $('#mainNav');
+function onScroll(){
+  navEl.classList.toggle('scrolled', window.scrollY > 40);
+  navEl.style.top = window.scrollY > 40 ? '0' : '2.1rem';
+}
+window.addEventListener('scroll', onScroll, { passive:true }); onScroll();
+
+/* Scroll-spy — 7 main sections (subsection anchors observed too, harmless) */
+if ('IntersectionObserver' in window) {
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      const id = en.target.id;
+      $$('#desktopMenu .nav-link[data-nav]').forEach(a => a.classList.toggle('active', a.dataset.nav === id));
+    });
+  }, { rootMargin:'-45% 0px -50% 0px' });
+  ['home','about','vmo','values','objectives','focus','impact','leadership','activities','gallery','news','media','contact'].forEach(id => {
+    const el = document.getElementById(id); if (el) spy.observe(el);
+  });
+}
+
+/* Mobile menu */
+const mm = $('#mobileMenu'), mb = $('#mobileBackdrop');
+function openMobile(){ mm.classList.add('open'); mb.classList.add('open'); document.body.style.overflow = 'hidden'; }
+function closeMobile(){ mm.classList.remove('open'); mb.classList.remove('open'); document.body.style.overflow = ''; }
+$('#menuBtn').addEventListener('click', openMobile);
+$('#mobileClose').addEventListener('click', closeMobile);
+mb.addEventListener('click', closeMobile);
+
+/* Smooth scroll */
+document.addEventListener('click', e => {
+  const a = e.target.closest('[data-scroll]');
+  if (!a) return;
+  const id = (a.getAttribute('href') || '').replace('#','');
+  const el = document.getElementById(id);
+  if (el) { e.preventDefault(); el.scrollIntoView({ behavior:'smooth', block:'start' }); history.replaceState(null,'','#' + id); }
+  closeMobile();
+});
+
+/* Reveal-on-scroll */
+let revealObs;
+function observeReveals(){
+  if (!('IntersectionObserver' in window)) { $$('.reveal').forEach(el => el.classList.add('in')); return; }
+  if (!revealObs) {
+    revealObs = new IntersectionObserver(entries => {
+      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); revealObs.unobserve(en.target); } });
+    }, { threshold:.12 });
+  }
+  $$('.reveal:not(.in)').forEach(el => revealObs.observe(el));
+}
+
+/* Contact form — disabled until a real delivery channel exists */
+const cf = $('#contactForm');
+if (cf) cf.addEventListener('submit', e => e.preventDefault());
+
+const HAS_NEWS = (typeof FACEBOOK_NEWS !== 'undefined' && FACEBOOK_NEWS);
+const NEWS_LIVE = !!(HAS_NEWS && typeof FACEBOOK_CONFIG !== 'undefined' && FACEBOOK_CONFIG.ENDPOINT && FACEBOOK_CONFIG.ENDPOINT !== '/api/news');
+function renderNewsNote(){
+  const g = $('#fbNewsGrid'); if (!g) return;
+  g.innerHTML = '<div class="col-span-full text-center py-14 reveal">' +
+    '<i class="fa-solid fa-plug-circle-bolt text-4xl" style="color:var(--muted)"></i>' +
+    '<p class="mt-4 prose-body text-sm" style="color:var(--muted)">' + escHtml(T('news_sub')) + '</p>' +
+  '</div>';
+  observeReveals();
+}
+if (HAS_NEWS) {
+  if (NEWS_LIVE) {
+    FACEBOOK_NEWS.init(document.getElementById('fbNewsGrid'));
+    if ('MutationObserver' in window) {
+      new MutationObserver(() => $$('#fbNewsGrid .reveal').forEach(el => el.classList.add('in')))
+        .observe(document.getElementById('fbNewsGrid'), { childList:true });
+    }
+  } else {
+    renderNewsNote();
+  }
+}
+
+/* Init */
+$('#year').textContent = new Date().getFullYear();
+applyLang();
+carGo(0); carStart();
+observeReveals();
+</script>
+</body>
+</html>

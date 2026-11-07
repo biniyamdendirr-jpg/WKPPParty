@@ -1,0 +1,244 @@
+/* ============================================================
+   styles.css — Wolkite City Prosperity Party website
+   Complete STATIC CSS layer for index.html.
+   Replaces the partial Tailwind utility file and removes every
+   CSS CDN dependency. Colors come from :root design tokens
+   defined in index.html. Explicit responsive media queries
+   below (sm 640 / md 768 / lg 1024 / xl 1280).
+   ============================================================ */
+
+/* ---------- 1. GLOBAL RESET / BASE ---------- */
+*,::before,::after{box-sizing:border-box;margin:0;padding:0;border:0 solid currentcolor}
+html{line-height:1.5;-webkit-text-size-adjust:100%;tab-size:4}
+body{line-height:inherit;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+img,video,canvas,svg{max-width:100%;height:auto;display:block}
+button,input,optgroup,select,textarea{font:inherit;color:inherit;margin:0;padding:0;background-color:transparent}
+button{cursor:pointer}
+a{color:inherit;text-decoration:inherit}
+ul,ol{list-style:none}
+p,h1,h2,h3,h4,h5,h6{overflow-wrap:break-word}
+
+/* ---------- 2. DISPLAY / POSITION ---------- */
+.block{display:block}
+.hidden{display:none}
+.flex{display:flex}
+.flex-col{flex-direction:column}
+.flex-wrap{flex-wrap:wrap}
+.flex-1{flex:1 1 0%}
+.grid{display:grid}
+.relative{position:relative}
+.absolute{position:absolute}
+.fixed{position:fixed}
+.col-span-full{grid-column:1/-1}
+.items-center{align-items:center}
+.items-start{align-items:flex-start}
+.items-end{align-items:flex-end}
+.items-baseline{align-items:baseline}
+.justify-center{justify-content:center}
+.justify-between{justify-content:space-between}
+.justify-end{justify-content:flex-end}
+.shrink-0{flex-shrink:0}
+.overflow-hidden{overflow:hidden}
+.overflow-y-auto{overflow-y:auto}
+.object-cover{object-fit:cover}
+.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+
+/* ---------- 3. GRID COLUMNS ---------- */
+.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.grid-cols-6{grid-template-columns:repeat(6,minmax(0,1fr))}
+.grid-cols-\[2fr\,3fr\]{grid-template-columns:2fr 3fr}
+
+/* ---------- 4. SIZING ---------- */
+.w-5{width:1.25rem}.w-6{width:1.5rem}.w-7{width:1.75rem}.w-9{width:2.25rem}.w-11{width:2.75rem}
+.w-80{width:20rem}.w-full{width:100%}.w-10{width:2.5rem !important}
+.h-6{height:1.5rem}.h-7{height:1.75rem}.h-9{height:2.25rem}.h-11{height:2.75rem}.h-16{height:4rem}
+.h-full{height:100%}.h-10{height:2.5rem !important}
+.h-\[2\.1rem\]{height:2.1rem}
+.min-w-0{min-width:0}
+.max-w-3xl{max-width:48rem}
+.max-w-\[86vw\]{max-width:86vw}
+.min-h-\[280px\]{min-height:280px}
+.min-h-\[380px\]{min-height:380px}
+
+/* ---------- 5. POSITIONING ---------- */
+.inset-0{inset:0}
+.inset-x-0{left:0;right:0}
+.top-0{top:0}.top-5{top:1.25rem}.top-1\/2{top:50%}
+.right-0{right:0}.right-3{right:.75rem}.right-5{right:1.25rem}.right-8{right:2rem}
+.left-3{left:.75rem}.left-8{left:2rem}
+.bottom-7{bottom:1.75rem}
+.z-\[5\]{z-index:5}.z-\[6\]{z-index:6}
+.z-\[55\]{z-index:55}.z-\[65\]{z-index:65}.z-\[70\]{z-index:70}
+.-translate-y-1\/2{transform:translateY(-50%)}
+
+/* ---------- 7. SPACING ---------- */
+.p-3{padding:.75rem}.p-6{padding:1.5rem}.p-7{padding:1.75rem}
+.p-8{padding:2rem}.p-9{padding:2.25rem}
+.px-1{padding-inline:.25rem}.px-2\.5{padding-inline:.625rem}.px-3\.5{padding-inline:.875rem}.px-5{padding-inline:1.25rem !important}
+.py-0\.5{padding-block:.125rem}.py-3{padding-block:.75rem}.py-10{padding-block:2.5rem}.py-12{padding-block:3rem}.py-14{padding-block:3.5rem}.py-16{padding-block:4rem}
+.py-2\.5{padding-block:.625rem !important}
+.pt-6{padding-top:1.5rem}.pt-14{padding-top:3.5rem}
+.pb-8{padding-bottom:2rem}
+.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-1\.5{margin-top:.375rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}
+.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-6{margin-top:1.5rem}.mt-7{margin-top:1.75rem}.mt-8{margin-top:2rem}
+.mt-10{margin-top:2.5rem}.mt-12{margin-top:3rem}.mt-16{margin-top:4rem}
+.ml-2{margin-left:.5rem}.mr-2{margin-right:.5rem}.my-2{margin-block:.5rem}.mx-auto{margin-inline:auto}
+.gap-0\.5{gap:.125rem}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}
+.gap-3{gap:.75rem}.gap-3\.5{gap:.875rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-10{gap:2.5rem}.gap-12{gap:3rem}.gap-14{gap:3.5rem}
+.space-y-1 > :not([hidden]) ~ :not([hidden]){margin-top:.25rem}
+.space-y-3 > :not([hidden]) ~ :not([hidden]){margin-top:.75rem}
+.space-y-4 > :not([hidden]) ~ :not([hidden]){margin-top:1rem}
+
+/* ---------- 8. TYPOGRAPHY ---------- */
+.text-xs{font-size:.75rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}
+.text-xl{font-size:1.25rem}.text-2xl{font-size:1.5rem}.text-4xl{font-size:2.25rem}
+.text-\[\.68rem\]{font-size:.68rem}.text-\[\.72rem\]{font-size:.72rem}.text-\[\.8rem\]{font-size:.8rem}
+.text-\[\.85rem\]{font-size:.85rem !important}.text-\[\.88rem\]{font-size:.88rem}.text-\[\.92rem\]{font-size:.92rem}
+.text-\[\.95rem\]{font-size:.95rem}.text-\[11px\]{font-size:11px}.text-\[15px\]{font-size:15px}
+.font-medium{font-weight:500}.font-semibold{font-weight:600}.font-bold{font-weight:700}.font-extrabold{font-weight:800}
+.leading-tight{line-height:1.25}.leading-snug{line-height:1.375}.leading-relaxed{line-height:1.625}
+.tracking-wide{letter-spacing:.025em}
+.whitespace-nowrap{white-space:nowrap}
+.opacity-40{opacity:.4}.opacity-90{opacity:.9}
+.text-center{text-align:center}
+.resize-none{resize:none}
+
+/* ---------- 9. COLORS (design-token driven) ---------- */
+.text-white{color:#fff}
+.text-white\/85{color:rgba(255,255,255,.85)}
+.text-brand{color:#08B8D9}
+.text-brandDark{color:#087F9B}
+.text-gold{color:#D9A441}
+.text-goldLight{color:#A9E2EF}
+.text-\[#17324D\]{color:#17324D !important}
+.bg-white{background-color:#fff}
+.bg-white\/10{background-color:rgba(255,255,255,.1)}
+.bg-brand\/5{background-color:rgba(8,184,217,.05)}
+.hover\:bg-white\/10:hover{background-color:rgba(255,255,255,.1)}
+.hover\:bg-brand\/5:hover{background-color:rgba(8,184,217,.05)}
+.border{border-width:1px}
+.border-white\/25{border-color:rgba(255,255,255,.25)}
+.border-brand{border-color:#08B8D9 !important}
+.bg-brand{background-color:#08B8D9 !important}
+.rounded-full{border-radius:9999px}
+.rounded-xl{border-radius:.75rem}
+
+/* ---------- 10. MISC ---------- */
+@keyframes twpulse{0%,100%{opacity:1}50%{opacity:.5}}
+.animate-pulse{animation:twpulse 2s cubic-bezier(.4,0,.6,1) infinite}
+
+/* ---------- 11. NAVIGATION SYSTEM (explicit, hardware-class breakpoints) ----------
+   <  1024px : HAMBURGER MENU (3 CSS lines, zero iconfonts)
+   >= 1024px : CLASSIC HORIZONTAL HEADER NAV, hamburger hidden             */
+
+/* Desktop horizontal navigation */
+#desktopMenu{display:flex;align-items:center;gap:.125rem}
+.nav-link{position:relative;padding:.55rem .72rem;border-radius:.55rem;font-weight:600;font-size:.9rem;line-height:1.2;color:var(--text);transition:color .2s ease}
+.nav-link:hover{color:var(--brand-dark)}
+.nav-link.active{color:var(--brand-dark);font-weight:700}
+.nav-link.active::after{content:'';position:absolute;left:.72rem;right:.72rem;bottom:.12rem;height:2px;border-radius:2px;background:var(--brand)}
+
+/* Hamburger button — pure CSS three-line icon */
+#menuBtn{display:inline-flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;width:2.3rem;height:2.3rem;border-radius:9999px;background:rgba(255,255,255,.08)}
+#menuBtn:hover{background:rgba(255,255,255,.16)}
+.hb-line{display:block;width:1.15rem;height:2px;border-radius:2px;background:#fff;flex-shrink:0}
+#menuBtn[aria-expanded="true"]{background:rgba(255,255,255,.18)}
+
+/* Mobile panel — closed by default; .open slides it in (added by JS) */
+#mobileMenu{position:fixed;top:0;right:0;width:20rem;max-width:86vw;height:100%;z-index:71;overflow-y:auto;transform:translateX(100%);visibility:hidden;transition:transform .32s ease,visibility .32s ease;background:var(--bg-card);padding:1rem 0.75rem 1.5rem}
+#mobileMenu.open{transform:none;visibility:visible}
+#mobileBackdrop{position:fixed;inset:0;z-index:70;display:none;background:rgba(6,20,32,.55)}
+#mobileBackdrop.open{display:block}
+
+/* ---------- 12. RESPONSIVE LAYOUT (explicit media queries) ---------- */
+@media (min-width:640px){
+  .grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .p-8{padding:2rem}.p-9{padding:2.25rem}
+  .right-8{right:2rem}.left-8{left:2rem}
+}
+@media (min-width:768px){
+  .grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .grid-cols-\[2fr\,3fr\]{grid-template-columns:2fr 3fr}
+  .min-h-\[380px\]{min-height:380px}
+}
+@media (min-width:1024px){
+  .grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .grid-cols-6{grid-template-columns:repeat(6,minmax(0,1fr))}
+  .flex{display:flex}
+  .hidden{display:none}
+  .items-center{align-items:center}
+  .items-start{align-items:flex-start}
+  /* NAV: desktop bar on, hamburger + mobile panel off */
+  #desktopMenu{display:flex}
+  #menuBtn{display:none}
+  #mobileMenu{display:none;transform:none;visibility:hidden}
+  #mobileBackdrop{display:none}
+}
+@media (min-width:1280px){
+  .grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+/* Below the breakpoint: desktop menu off, hamburger on (explicit redundancy) */
+@media (max-width:1023px){
+  #desktopMenu{display:none}
+  #menuBtn{display:inline-flex}
+}
+
+/* ---------- 13. BLANK-PAGE GUARD ----------
+   Sections start fully VISIBLE even if JavaScript or a CDN fails.
+   (The .reveal scroll animation in the page <style> is enhancement-only.) */
+html .reveal,html .reveal-1,html .reveal-2,html .reveal-3{opacity:1 !important;transform:none !important}
+
+/* ============================================================
+   14. TAILWIND-STYLE COMPATIBILITY LAYER
+   Plain static CSS for the utility classes actually used in
+   index.html (static markup AND JS-generated strings).
+   a) `!`important variants  b) responsive-prefixed variants
+   (sm: 640 / md: 768 / lg: 1024 / xl: 1280)
+   ============================================================ */
+
+/* 14a. `!` prefix = declaration-level !important (matches Tailwind !w-10 etc.) */
+.\!w-10{width:2.5rem !important}
+.\!h-10{height:2.5rem !important}
+.\!px-5{padding-inline:1.25rem !important}
+.\!py-2\.5{padding-block:.625rem !important}
+.\!text-\[\.85rem\]{font-size:.85rem !important}
+.\!text-\[\#17324D\]{color:#17324D !important}
+.\!bg-brand{background-color:#08B8D9 !important}
+.\!border-brand{border-color:#08B8D9 !important}
+
+/* 14b. Responsive-prefixed utilities */
+@media (min-width:640px){
+  .sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sm\:p-9{padding:2.25rem}
+  .sm\:left-8{left:2rem}
+  .sm\:right-8{right:2rem}
+}
+@media (min-width:768px){
+  .md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .md\:grid-cols-\[2fr\,3fr\]{grid-template-columns:2fr 3fr}
+  .md\:min-h-\[380px\]{min-height:380px}
+}
+@media (min-width:1024px){
+  .lg\:flex{display:flex}
+  .lg\:hidden{display:none}
+  .lg\:items-center{align-items:center}
+  .lg\:items-start{align-items:flex-start}
+  .lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .lg\:grid-cols-6{grid-template-columns:repeat(6,minmax(0,1fr))}
+  /* NAV redundancy: desktop bar ON, hamburger + mobile panel OFF */
+  #desktopMenu{display:flex !important}
+  #menuBtn{display:none !important}
+  #mobileMenu{display:none !important}
+  #mobileBackdrop{display:none !important}
+}
+@media (min-width:1280px){
+  .xl\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
